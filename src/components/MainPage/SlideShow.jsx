@@ -3,10 +3,10 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 
 const images = [
-    { url: "./assets/rdr1.jpg" },
-    { url: "./assets/rdr2.jpg" },
-    { url: "./assets/rdr3.jpg" },
-    { url: "./assets/rdr4.jpg" },
+    { url: "../assets/rdr1.jpg" },
+    { url: "../assets/rdr2.jpg" },
+    { url: "../assets/rdr3.jpg" },
+    { url: "../assets/rdr4.jpg" },
   ];
   
   const App = () => {

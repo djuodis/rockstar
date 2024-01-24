@@ -3,11 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto Mono;
+
+    h1,h2,h3,h4,h5,h6 {
+        color: #ffab00;
+    }
+
+    p {
+        color: aliceblue;
+    }
 }
 
 body {
     background: black;
-    height: 2000px;
 }
 
 
@@ -126,11 +133,11 @@ header {
         .answer {
             display: none;
             overflow: hidden;
-            transition: max-height 0.5s ease; // You can adjust the transition speed
+            transition: max-height 0.5s ease;
       
             &.show {
               display: block;
-              max-height: 500px; // Adjust the max-height as needed
+              max-height: 500px; 
             }
           }
         h4 {
@@ -140,6 +147,7 @@ header {
             cursor: pointer;
         }
         p {
+            margin-bottom: 10px;
             color: lightgray;
         }
 
@@ -149,6 +157,10 @@ header {
     }
 }
 
+footer{
+    width: 100%;
+    margin-bottom: 20px;
+
 
 .gameLauncher {
     display: flex;
@@ -156,7 +168,7 @@ header {
     width: 80%;
     margin: auto;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 90px;
 
     .info {
         display: flex;
@@ -183,9 +195,114 @@ header {
             &:hover {
                 background: #ffab00;
                 color: white;
+                }
             }
         }
     }
+    .bottom {
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;        
+        margin-bottom: 80px;
+        h1 {
+            color: #ffab00;
+            font-size: 24px;
+        }
+        .locations {
+            display: flex;
+            gap: 20px;
 
-   
+            h1{
+                border-bottom: 1px solid lightgray;
+                padding: 0px 15px;
+                border-radius: 8px;
+            }
+        }
+
+        .socials {
+            display: flex;
+            gap: 20px;
+
+            svg {
+                color: white;
+                font-size: 30px;
+                transition: 0.3s;
+            &:hover {
+                transform: scale(1.20);
+                color: #ffab00;
+            }
+            }
+        }
+    }
+}
+
+
+.header {
+    width: 82%;
+    margin: 30px 0px;
+    h1 {
+        margin: -28px;
+        color: #ffab00;
+        display: flex;
+        font-size: 50px;
+        justify-content:flex-end;
+    }
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    iframe {
+
+        width: 1000px;
+        height: 500px;
+    }
+}
+
+.about {
+    margin-top: 80px;
+    h1 {
+        font-size: 70px;
+        margin-left: 30px;
+    }
+
+.team{
+    display: flex;
+    justify-content: center;
+
+    .teamPics {
+        margin-top: 20px;
+        text-align: center;
+        img {
+            width: 800px;
+        }
+    }
+
+    .info {
+        font-size: 30px;
+        width: 35%;
+        margin-top: 280px;
+        margin-left: -100px;
+    }
+}
+.games {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .gta5 {
+        width: 350px;
+        margin-right: 20px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 21px;
+        width: 30%;
+    }
+}
 }
