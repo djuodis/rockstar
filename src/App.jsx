@@ -1,3 +1,4 @@
+// App.jsx
 import './scss/style.scss';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -10,6 +11,7 @@ import Rockstars from './components/MainPage/Rockstars';
 import About from './components/AboutPage/About';
 import Games from './components/GamesPage/Games';
 import Videos from './components/VideosPage/Videos';
+import GamePage from './components/GamesPage/GamePage'; // Import GamePage
 
 // New component for displaying MainPage content
 const Home = () => (
@@ -34,6 +36,8 @@ function App() {
         <Route path="/rockstars" element={<Rockstars />} />
         <Route path="/games" element={<Games />} />
         <Route path="/videos" element={<Videos />} />
+        {/* Add a route for GamePage.jsx */}
+        <Route path="/game/:id" element={<GamePage />} />
       </Routes>
     </Router>
   );
