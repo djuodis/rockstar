@@ -158,16 +158,18 @@ header {
 }
 
 footer{
-    width: 100%;
     margin-bottom: 20px;
-
-
-.gameLauncher {
     display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    .gameLauncher {
+    display: flex;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
     margin-bottom: 90px;
 
     .info {
@@ -182,6 +184,10 @@ footer{
         p {
             margin: 30px 0;
             color: lightgrey;
+        }
+
+        img {
+            width: 100px;
         }
 
         a {
@@ -200,10 +206,13 @@ footer{
         }
     }
     .bottom {
+        display: flex;
+        flex-wrap: wrap;
         margin: auto;
         width: 90%;
+        gap: 100px;
         display: flex;
-        justify-content: space-between;        
+        justify-content: center;        
         margin-bottom: 80px;
         h1 {
             color: #ffab00;
@@ -399,19 +408,77 @@ footer{
 }
 
 .pics {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 50px;
+    gap: 10px;
     margin-top: 50px;
-    .card {
-        width: 30%;
-        margin-top: 20px;
-        margin-inline: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    a {
+        margin: 20px 0;
+        width: 400px;
         transition: 0.6s;
 
         &:hover {
             transform: scale(1.05);
+        }
+    }
+
+    img {
+        width: 400px;
+    }
+     
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        margin: 50px 0;
+        width: 550px;
+        height: 150px;
+    }
+
+    .game-top {
+        margin-top: -10px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .game-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+        p {
+            margin: 10px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    img {
+        width: 25%;
+    }
+
+    .screens {
+        font-size: 50px;
+        margin-top: 50px;
+    }
+    .game-images {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        justify-content: center;
+        gap: 20px;
+
+        img {
+            width: 450px;
         }
     }
 }
