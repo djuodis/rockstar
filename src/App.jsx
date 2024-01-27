@@ -11,7 +11,10 @@ import Rockstars from './components/MainPage/Rockstars';
 import About from './components/AboutPage/About';
 import Games from './components/GamesPage/Games';
 import Videos from './components/VideosPage/Videos';
-import GamePage from './components/GamesPage/GamePage'; // Import GamePage
+import GamePage from './components/GamesPage/GamePage'; 
+import Login from './components/Registration/Login';
+import SignUp from './components/Registration/SignUp';
+
 
 // New component for displaying MainPage content
 const Home = () => (
@@ -33,10 +36,11 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* Add routes for other pages */}
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/rockstars" element={<Rockstars />} />
         <Route path="/games" element={<Games />} />
         <Route path="/videos" element={<Videos />} />
-        {/* Add a route for GamePage.jsx */}
         <Route path="/game/:id" element={<GamePage />} />
       </Routes>
     </Router>

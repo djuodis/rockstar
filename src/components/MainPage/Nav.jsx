@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import logoImage from '../../../assets/logo.png';
+import { MdLogin } from "react-icons/md";
+import logoImage from '../../../public/assets/logo.png';
 
 const Nav = () => {
   return (
@@ -17,6 +17,8 @@ const Nav = () => {
           <Link to="/games">GAMES</Link>
           <a href='https://store.rockstargames.com' target="_blank" rel="noopener noreferrer">STORE</a>
           <a href="https://support.rockstargames.com" target="_blank" rel="noopener noreferrer">SUPPORT</a>
+          <Link to="/login" target="_blank"><MdLogin /></Link>
+          <Link to="/signup" target="_blank"><MdLogin /></Link>
         </div>
       </nav>
     </>

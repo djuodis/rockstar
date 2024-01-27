@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTwitch, FaInstagram, FaTwitter, FaYoutube, FaFacebookF } from 'react-icons/fa';  
-import gta5Image from '../../../assets/gta5.png';
+import gta5Image from '../../../public/assets/gta5.png';
 
 const Footer = () => {
   return (
@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="info">
             <h2>ROCKSTAR GAME LAUNCHER</h2>
             <p>Download and play the latest PC games from Rockstar Games</p>
-            <a href="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe?_gl=1*1wls5hk*_ga*MjE0NTY4MzM0MC4xNzA2MDI5OTQw*_ga_PJQ2JYZDQC*MTcwNjA0NDY0Mi4yLjAuMTcwNjA0NDY0Mi4wLjAuMA..">Download for Windows</a>
+            <a  href="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe?_gl=1*1wls5hk*_ga*MjE0NTY4MzM0MC4xNzA2MDI5OTQw*_ga_PJQ2JYZDQC*MTcwNjA0NDY0Mi4yLjAuMTcwNjA0NDY0Mi4wLjAuMA..">Download for Windows</a>
           </div>
-          <img src={gta5Image} alt="GTA 5" />
+          <img className='btmPic' src={gta5Image} alt="GTA 5" />
         </div>
 
         <div className="bottom">

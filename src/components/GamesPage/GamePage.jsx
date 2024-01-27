@@ -65,8 +65,34 @@ const GamePage = () => {
                   <img src={review.gameImage3} />
                   <img src={review.gameImage4} />
                 </div>
-                <p>Price: {review.price}</p>
-                <p>Platforms: {review.platforms}</p>
+
+                <table className="specs">
+                <h1>Specifications</h1>
+                  <tbody>
+                    <tr>
+                      <th>Developers</th>
+                      <td>{review.developer}</td>
+                    </tr>
+                    <tr>
+                      <th>Platforms</th>
+                      <td>{review.platform}</td>
+                    </tr>
+                    <tr>
+                      <th>Released</th>
+                      <td>{review.released}</td>
+                    </tr>
+                    <tr>
+                      <th>Rating</th>
+                      <td><img
+                  className="rating"
+                  src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/f4b0d9409df1e8a420b2118e4e601263.svg"
+                  alt=""
+                /></td>
+                    </tr>
+                
+                  </tbody>
+                </table>
+
               </div>
             </div>
           ))}
