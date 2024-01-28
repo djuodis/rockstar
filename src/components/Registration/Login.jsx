@@ -1,38 +1,48 @@
 // Login.jsx
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [users, setUsers] = useState([]);
+  const [incorrectPassword, setIncorrectPassword] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleLogin = async () => {
-    try {
-      // Perform login API call
-      const response = await fetch('http://localhost:4000/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      if (response.ok) {
-        // Login successful, set the logged-in user
-        const user = await response.json();
-        setLoggedInUser(user);
-        console.log(`Logged in as ${user.username}`);
-
-        // Redirect to the home page after successful login
-        navigate('/');
-      } else {
-        // Login failed
-        console.error('Login failed');
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/users');
+        if (response.ok) {
+          const userData = await response.json();
+          setUsers(userData);
+        } else {
+          console.error('Error fetching users:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
       }
-    } catch (error) {
-      console.error('Error during login:', error);
+    };
+
+    fetchUsers();
+  }, []);
+
+  const handleLogin = () => {
+    const user = users.find((user) => user.firstName === username);
+
+    if (user) {
+      if (user.password === password) {
+        setLoggedInUser(user);
+        console.log(`Logged in as ${user.firstName}`);
+        navigate(location.state?.from ? location.state.from : '/');
+        // Remove window.close() to prevent tab closure
+      } else {
+        setIncorrectPassword(true);
+      }
+    } else {
+      setIncorrectPassword(true);
     }
   };
 
@@ -59,10 +69,11 @@ const Login = () => {
         <button type="button" onClick={handleLogin}>
           Login
         </button>
+
+        {incorrectPassword && <p style={{ color: 'red' }}>Incorrect username or password</p>}
       </form>
 
-      {/* Display username if logged in */}
-      {loggedInUser && <p>Welcome, {loggedInUser.username}!</p>}
+      {loggedInUser && <p>Welcome, {loggedInUser.firstName}!</p>}
     </div>
   );
 };

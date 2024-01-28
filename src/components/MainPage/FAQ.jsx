@@ -64,8 +64,8 @@ const FAQ = () => {
             className={`answer ${expandedQuestions.includes(6) ? 'show' : ''}`}
           >
             If you wish to delete your personal information, you can do so by requesting a Rockstar Games account Deletion using the Delete Account and Information option at the following URL:
-            <a href="https://support.rockstargames.com/account/
-">https://support.rockstargames.com/account/
+            <a href="https://support.rockstargames.com/account/ 
+" target="_blank">https://support.rockstargames.com/account/
 </a>
           </p>
           <hr/>

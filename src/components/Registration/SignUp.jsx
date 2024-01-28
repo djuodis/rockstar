@@ -1,6 +1,10 @@
+// SignUp.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: '',
     email: '',
@@ -40,11 +44,9 @@ const SignUp = () => {
         }
       } else {
         console.error('Error checking username or email existence:', checkResponse.statusText);
-        // Handle the error, show a message to the user, or perform other actions
       }
     } catch (error) {
       console.error('Error:', error.message);
-      // Handle any unexpected errors
     }
   };
 
@@ -58,7 +60,21 @@ const SignUp = () => {
     }
 
     try {
-      // Proceed with signup
+      // Check if the username or email already exists in the API
+      const existingUser = await fetch('http://localhost:4000/users', {
+        method: 'GET',
+      }).then((response) => response.json());
+
+      if (
+        existingUser.some(
+          (user) => user.firstName === formData.firstName || user.email === formData.email
+        )
+      ) {
+        alert('Username or Email is already in use');
+        return;
+      }
+
+      // Proceed with signup if everything is okay
       const response = await fetch('http://localhost:4000/users', {
         method: 'POST',
         headers: {
@@ -69,14 +85,13 @@ const SignUp = () => {
 
       if (response.ok) {
         console.log('Signup successful!');
-        // You can redirect the user or perform other actions after successful signup
+        // Redirect to the login page after successful signup
+        navigate('/login');
       } else {
         console.error('Signup failed:', response.statusText);
-        // Handle the error, show a message to the user, or perform other actions
       }
     } catch (error) {
       console.error('Error:', error.message);
-      // Handle any unexpected errors
     }
   };
 

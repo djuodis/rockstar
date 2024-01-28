@@ -7,7 +7,7 @@ import Footer from "../../components/MainPage/Footer";
 const GamePage = () => {
   const { id } = useParams();
   const [game, setGame] = useState(null);
-  const [reviews, setReviews] = useState([]);
+  const [game_info, setgame_info] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,13 +23,13 @@ const GamePage = () => {
       }
 
       try {
-        const reviewsResponse = await fetch(
-          `http://localhost:4000/reviews?productId=${id}`
+        const game_infoResponse = await fetch(
+          `http://localhost:4000/game_info?productId=${id}`
         );
-        const reviewsData = await reviewsResponse.json();
-        setReviews(reviewsData);
+        const game_infoData = await game_infoResponse.json();
+        setgame_info(game_infoData);
       } catch (error) {
-        console.error("Error fetching reviews:", error);
+        console.error("Error fetching game_info:", error);
       }
 
       setLoading(false);
@@ -45,7 +45,7 @@ const GamePage = () => {
         <p>Loading...</p>
       ) : (
         <>
-          {reviews.map((review, index) => (
+          {game_info.map((review, index) => (
             <div key={index}>
               <div className="game-info">
                 <img className="logo" src={review.logo} />

@@ -1,171 +1,228 @@
+@font-face {
+  font-family: "pricedown";
+  src: url("pricedown%20bl.ttf");
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto Mono;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto Mono;
 
-    h1,h2,h3,h4,h5,h6 {
-        color: #ffab00;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #ffab00;
+    font-family: pricedown ;
+    font-size: 50px;
+  }
 
-    p {
-        color: aliceblue;
-    }
+  p {
+    color: aliceblue;
+  }
 }
 
 body {
-    background: black;
+  background: black;
+}
+.home {
+  background: url(https://images8.alphacoders.com/573/573739.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  img {
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 100px;
+    background: none;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      width: 100px;
+    }
+
+    a {
+      font-family: pricedown;
+      text-decoration: none;
+      color: white;
+      font-size: 45px;
+      margin-left: 30px;
+      width: 130px;
+      transition: 0.3s;
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: black;
+      &:hover {
+        color: #ffab00;
+        transform: scale(1.08);
+      }
+    }
+  }
 }
 
-
-//prideti burgeri 
+//prideti burgeri
 nav {
-    font-family: inter;
-    background: #ffab00;
-    margin: auto;
-    padding: 10px;
+  background: #ffab00;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 50%;
+  justify-content: center;
+
+  .links {
     display: flex;
-    align-items: center;
-    gap: 50%;
-    justify-content: center;
 
-    .links {
-        display: flex;
-        
-        a {
-            text-decoration: none;
-            color: black;
-            margin-left: 20px;
-            cursor: pointer;
-            transition: 0.3s;
+    a {
+    font-family: pricedown;
+    color: black;
+    font-size: 18px;
+      text-decoration: none;
+      margin-left: 20px;
+      cursor: pointer;
+      transition: 0.3s;
 
-            &:hover {
-                transform: scale(1.08);
-                color: white;
-            }
-        }
+      &:hover {
+        transform: scale(1.2);
+      }
     }
-    .logo {
-
-        img {
-            width: 40px;
-        }
+  }
+  .logo {
+    img {
+      width: 40px;
     }
+  }
 }
 
 header {
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-    h1 {
-        font-size: 50px;
-        font-weight: 500;
-        color: #ffab00;
-    }
+  width: 95%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  
+  h1 {
+    font-size: pricedown;
+    font-size: 80px;
+    color: #ffab00;
+  }
 }
 
 .simpleImageSlider {
-    width: 1440px;
-    height: 600px;
-  }
-  
+  width: 1440px;
+  height: 600px;
+}
+
 .images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  .name {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    h2 {
+      font-size: pricedown;
+      color: #ffab00;
+      font-size: 50px;
+    }
+  }
+  .parahraps {
+    color: lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
-}      
-    
-
-.rg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    .name {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        h2 {
-            color: #ffab00;
-            font-size: 50px;
-
-        }
-    }
-    .parahraps {
-        color : lightgray;
-        display: flex;
-        align-items: center ;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        h4 {
-            font-size: 40px;
-            color: white;
-        }
-        .parahraph1, .parahraph2{
-            width: 450px;
-        }
-    }
-}
-
-.faq{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-    .name {
-        margin-bottom: 20px;
-        h2 {
-            color: #ffab00;
-            font-size: 50px;
-
-        }
-    }   
-
-    .questions {
-
-        .answer {
-            display: none;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-      
-            &.show {
-              display: block;
-              max-height: 500px; 
-            }
-          }
-        h4 {
-            font-size: 20px;
-            color: white;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-        p {
-            margin-bottom: 10px;
-            color: lightgray;
-        }
-
-        .q1, .q2, .q3, .q4, .q5, .q6 {
-            margin-bottom: 50px;
-        }
-    }
-}
-
-footer{
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    
-    
-    .gameLauncher {
-        width: 100%;
+    gap: 20px;
+    h4 {
+      font-size: pricedown;
+      font-size: 40px;
+      color: white;
+    }
+    .parahraph1,
+    .parahraph2 {
+      width: 450px;
+    }
+  }
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  .name {
+    margin-bottom: 20px;
+    h2 {
+      font-size: pricedown;
+      color: #ffab00;
+      font-size: 50px;
+    }
+  }
+
+  .questions {
+    .answer {
+      display: none;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+
+      &.show {
+        display: block;
+        max-height: 500px;
+      }
+    }
+    h4 {
+      font-size: pricedown;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    p {
+      margin-bottom: 10px;
+      color: lightgray;
+    }
+
+    .q1,
+    .q2,
+    .q3,
+    .q4,
+    .q5,
+    .q6 {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+footer {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .gameLauncher {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -175,354 +232,358 @@ footer{
     margin-bottom: 90px;
 
     .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h2 {
-            color: #ffab00;
-            font-size: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+      font-size: pricedown;
+        color: #ffab00;
+        font-size: 50px;
+      }
+      p {
+        margin: 30px 0;
+        color: lightgrey;
+      }
 
-        }
-        p {
-            margin: 30px 0;
-            color: lightgrey;
-        }
-
-        .btmPic {
-         width: 90%;
-        }
-
-        a {
-            border: 1px solid #ffab00;
-            padding: 15px 30px;
-            color: #ffab00;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-
-            &:hover {
-                background: #ffab00;
-                color: white;
-                }
-            }
-        }
-    }
-    .bottom {
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
+      .btmPic {
         width: 90%;
-        gap: 100px;
-        display: flex;
-        justify-content: center;        
-        margin-bottom: 80px;
-        h1 {
-            color: #ffab00;
-            font-size: 24px;
-        }
-        .locations {
-            display: flex;
-            gap: 20px;
+      }
 
-            h1{
-                border-bottom: 1px solid lightgray;
-                padding: 0px 15px;
-                border-radius: 8px;
-            }
-        }
+      a {
+        border: 1px solid #ffab00;
+        padding: 15px 30px;
+        color: #ffab00;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s;
 
-        .socials {
-            display: flex;
-            gap: 20px;
-
-            svg {
-                color: white;
-                font-size: 30px;
-                transition: 0.3s;
-            &:hover {
-                transform: scale(1.20);
-                color: #ffab00;
-            }
-            }
+        &:hover {
+          background: #ffab00;
+          color: white;
         }
+      }
     }
+  }
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    gap: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    h1 {
+      font-size: pricedown;
+      color: #ffab00;
+      font-size: 24px;
+    }
+    .locations {
+      display: flex;
+      gap: 20px;
+
+      h1 {
+      font-size: pricedown;
+        border-bottom: 1px solid lightgray;
+        padding: 0px 15px;
+        border-radius: 8px;
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 20px;
+
+      svg {
+        color: white;
+        font-size: 30px;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.2);
+          color: #ffab00;
+        }
+      }
+    }
+  }
 }
 
 .header {
-    width: 82%;
-    margin: 30px 0px;
-    h1 {
-        margin: -28px;
-        color: #ffab00;
-        display: flex;
-        font-size: 50px;
-        justify-content:flex-end;
-    }
+  width: 82%;
+  margin: 30px 0px;
+  h1 {
+    font-size: pricedown;
+    color: #ffab00;
+    display: flex;
+    font-size: 50px;
+    justify-content: flex-end;
+  }
 }
 
 .video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    iframe {
-            width: 1000px;
-        height: 500px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  iframe {
+    width: 1000px;
+    height: 500px;
+  }
 }
 
 .about {
-    width: 90%;
-    margin: auto    ;
-    margin-top: 200px;
-    h1 {
-        font-size: 50px;
-        margin: -28px;
-    }
-    
+  width: 90%;
+  margin: auto;
+  margin-top: 200px;
+  h1 {
+    font-size: pricedown;
+    font-size: 50px;
+  }
 
-.team{
+  .team {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
     .teamPics {
-        margin-top: 20px;
-        text-align: center;
-        img {
-            width: 800px;
-        }
+      margin-top: 20px;
+      text-align: center;
+      img {
+        width: 800px;
+      }
     }
     .info {
-        font-size: 30px;
-        width: 35%;
-        margin-top: 280px;
-        margin-left: -100px;
+      font-size: 30px;
+      width: 35%;
+      margin-top: 280px;
+      margin-left: -100px;
     }
-}
-.games {
+  }
+  .games {
     margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     .gta5 {
-        width: 350px;
-        margin-right: 20px;
+      width: 350px;
+      margin-right: 20px;
     }
     h4 {
-        font-size: 20px;
+    font-size: pricedown;
+
+      font-size: 20px;
     }
     p {
-        font-size: 21px;
-        width: 30%;
+      font-size: 21px;
+      width: 30%;
     }
-}
+  }
 
-.start {
+  .start {
     width: 90%;
     margin: auto;
     margin-top: 200px;
 
     h2 {
-        text-align: end;
-        font-size: 70px;
-        margin: -28px;
+      text-align: end;
+      font-size: 70px;
     }
     img {
-        .gta1 {
-            width: 500px;
-            height: 350px;
-        }
+      .gta1 {
+        width: 500px;
+        height: 350px;
+      }
     }
 
     .top {
-        margin-top: 80px;
+      margin-top: 80px;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      height: 550px;
+      .topText {
+        width: 50%;
         display: flex;
-        gap: 50px;
-        justify-content: center;
-        height: 550px;
-        .topText {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
+        flex-direction: column;
 
-            h3 {
-                font-size: 32px;
-                color: white;
-                margin-bottom: 20px;
-            }
+        h3 {
+    font-size: pricedown;
 
-            h4 {
-                color: grey;
-                font-size: 18px;
-                margin-top: 20px;
-            }
+          font-size: 32px;
+          color: white;
+          margin-bottom: 20px;
         }
+
+        h4 {
+    font-size: pricedown;
+
+          color: grey;
+          font-size: 18px;
+          margin-top: 20px;
+        }
+      }
     }
 
     .middle {
-        flex-direction: row-reverse;
-        display: flex;
-        gap: 50px;
-        justify-content: center;
-        height: 550px;
+      flex-direction: row-reverse;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      height: 550px;
 
-        .middleText {
-            align-items: center;
-            width: 30%;
-            margin-top: 150px;
-            h3 {
-                font-size: 32px;
-                color: white;
-            }
+      .middleText {
+        align-items: center;
+        width: 30%;
+        margin-top: 150px;
+        h3 {
+    font-size: pricedown;
+
+          font-size: 32px;
+          color: white;
         }
-        img {
-            margin-top: -80px;
-        }
+      }
+      img {
+        margin-top: -80px;
+      }
     }
 
-    .bottom{
-        flex-direction: row;
-        display: flex;
-        gap: 50px;
-        justify-content: center;
-        height: 550px;
+    .bottom {
+      flex-direction: row;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      height: 550px;
 
-        img {
-            margin-top: -80px;
-            margin-right: 200px ;
+      img {
+        margin-top: -80px;
+        margin-right: 200px;
+      }
+
+      .bottomText {
+        align-items: center;
+        margin-top: 150px;
+        width: 30%;
+        h4 {
+    font-size: pricedown;
+
+          margin-left: -185px;
+          color: grey;
+          font-size: 16px;
         }
-
-        .bottomText {
-            align-items: center;
-            margin-top: 150px;
-            width: 30%;
-            h4 {
-
-                margin-left: -185px;
-                color: grey;
-                font-size: 16px;
-            }
-
-            
-        }
+      }
     }
-}
+  }
 }
 
 .pics {
-    margin: auto;
-    gap: 10px;
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    a {
-        margin: 20px 0;
-       max-width: 400px;
-        transition: 0.6s;
+  margin: auto;
+  gap: 10px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  a {
+    margin: 20px 0;
+    max-width: 400px;
+    transition: 0.6s;
 
-        &:hover {
-            transform: scale(1.05);
-        }
+    &:hover {
+      transform: scale(1.05);
     }
+  }
 
-    .card-img {
-        width: 100%;
-    }
-     
+  .card-img {
+    width: 100%;
+  }
 }
 
 .game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    margin: 50px 0;
+    width: 70%;
+  }
+
+  .game-top {
+    width: 100%;
+    margin: auto;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .game-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+    p {
+      margin: 10px;
+      font-size: 15px;
+    }
+  }
+  img {
+    min-width: 25%;
+    max-height: 450px;
+  }
+
+  .screens {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  .game-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 450px;
+    }
+  }
+  .specs {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
 
-    .logo {
-        margin: 50px 0;
-        width: 70%;
+    td {
+      text-align: center;
+      padding: 15px;
+      height: 45px;
+      border: 1px solid grey;
+      border-collapse: collapse;
     }
 
-    .game-top {
-        width: 100%;
-        margin: auto;
-        margin-top: -10px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .game-details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 50%;
-        }
-        p {
-            margin: 10px;
-            font-size: 15px;
-        }
+    td,
+    th {
+      color: white;
     }
-    img {
-       min-width: 25%;
-        max-height: 450px;
+
+    th {
+      border: 1px solid grey;
+      border-right: none;
+      padding: 15px;
     }
-    
-
-    .screens {
-        font-size: 50px;
-        margin-top: 50px;
-    }
-    .game-images {
-        display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-        margin: auto;
-        margin-top: 30px;
-        justify-content: center;
-        gap: 20px;
-
-        img {
-            width: 450px;
-        }
-    }
-    .specs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom: 80px;
-
-        td {
-            text-align: center;
-            padding: 15px;
-            height: 45px;
-        border: 1px solid grey;
-        border-collapse: collapse;
-        }
-
-        td, th {
-            color: white;
-        }
-
-        th {
-            border: 1px solid grey;
-            border-right: none;
-            padding: 15px;
-
-        }
-    }
-    .rating {
-
-        height: 100px;
-    }
+  }
+  .rating {
+    height: 100px;
+  }
 }
 
 label {
-    color: wheat;
+  color: wheat;
 }
