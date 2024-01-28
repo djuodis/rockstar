@@ -75,12 +75,15 @@ nav {
   margin: auto;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 50%;
   justify-content: center;
 
   .links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     a {
     font-family: pricedown;
@@ -128,7 +131,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  }
 
 .rg {
   display: flex;
@@ -222,7 +225,7 @@ footer {
   flex-wrap: wrap;
 
   .gameLauncher {
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -230,11 +233,15 @@ footer {
     justify-content: center;
     margin: auto;
     margin-bottom: 90px;
-
+    .btmPic {
+      width: 50%;
+    }
     .info {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      
       h2 {
       font-size: pricedown;
         color: #ffab00;
@@ -245,9 +252,7 @@ footer {
         color: lightgrey;
       }
 
-      .btmPic {
-        width: 90%;
-      }
+      
 
       a {
         border: 1px solid #ffab00;
@@ -501,6 +506,39 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .reviews {
+    width: 90%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+
+      font-size: 70px;
+    }
+     
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+      justify-content: center;
+    }
+    .card {
+      width: 30%;
+      padding: 15px;
+      border: 1px solid grey;
+      border-radius: 8px;
+
+
+      h2, p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 10px;
+      }
+    }
+
+  }
 
   .logo {
     margin: 50px 0;

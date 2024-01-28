@@ -1,7 +1,6 @@
 // Nav.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MdLogin } from "react-icons/md";
 import logoImage from '../../../public/assets/logo.png';
 
 const Nav = () => {
@@ -33,8 +32,8 @@ const Nav = () => {
             </>
           ) : (
             <>
-              <Link to="/login" target="_blank"><MdLogin /> Login</Link>
-              <Link to="/signup" target="_blank"><MdLogin /> Sign Up</Link>
+              <Link to="/login" target="_blank"> Login</Link>
+              <Link to="/signup" target="_blank">Sign Up</Link>
             </>
           )}
         </div>

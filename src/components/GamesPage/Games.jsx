@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Nav from "../../components/MainPage/Nav";
 import Footer from "../../components/MainPage/Footer";
-
+import ScrollToTop from "react-scroll-to-top";
 const Games = () => {
   const { id } = useParams();
   const [games, setGames] = useState([]);
@@ -47,6 +47,7 @@ const Games = () => {
 
   return (
     <>
+    <ScrollToTop smooth color="#6f00ff" />
       <Nav />
       <div>
         <label>
@@ -63,7 +64,7 @@ const Games = () => {
           <p>Loading...</p>
         ) : (
           games.map((game) => (
-            <Link key={game.id} to={`/game/${game.id}`}>
+            <Link  target="_blank" key={game.id} to={`/game/${game.id}`}>
               <img className="card-img" src={game.image} alt={game.title} />
             </Link>
           ))

@@ -1,10 +1,13 @@
 import React from "react";
 import Nav from "../../components/MainPage/Nav"; // Updated import path
 import Footer from "../../components/MainPage/Footer"; // Updated import path
+import ScrollToTop from "react-scroll-to-top";
 
 const About = () => {
   return (
     <>
+    <ScrollToTop smooth color="#6f00ff" />
+
       <Nav />
       <div className="header">
         <h1>GREAT IDEAS CAM COME </h1>
