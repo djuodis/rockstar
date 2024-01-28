@@ -1,4 +1,3 @@
-// SignUp.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +20,6 @@ const SignUp = () => {
       [name]: value,
     });
 
-    // Check if the entered username or email already exists
     try {
       const checkResponse = await fetch('http://localhost:4000/users/check', {
         method: 'POST',
@@ -53,14 +51,12 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if username or email is already in use
     if (usernameExists || emailExists) {
       alert('Username or Email is already in use');
       return;
     }
 
     try {
-      // Check if the username or email already exists in the API
       const existingUser = await fetch('http://localhost:4000/users', {
         method: 'GET',
       }).then((response) => response.json());
@@ -74,7 +70,6 @@ const SignUp = () => {
         return;
       }
 
-      // Proceed with signup if everything is okay
       const response = await fetch('http://localhost:4000/users', {
         method: 'POST',
         headers: {
@@ -85,7 +80,6 @@ const SignUp = () => {
 
       if (response.ok) {
         console.log('Signup successful!');
-        // Redirect to the login page after successful signup
         navigate('/login');
       } else {
         console.error('Signup failed:', response.statusText);

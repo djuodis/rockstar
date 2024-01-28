@@ -7,9 +7,7 @@ import logoImage from '../../../public/assets/logo.png';
 const Nav = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
 
-  // Function to handle logout
   const handleLogout = () => {
-    // Add logic to clear the logged-in user state or perform any other logout actions
     setLoggedInUser(null);
   };
 
@@ -28,7 +26,6 @@ const Nav = () => {
           <a href="https://support.rockstargames.com" target="_blank" rel="noopener noreferrer">SUPPORT</a>
           <Link to="/about">ABOUT</Link>
 
-          {/* Conditionally render login, signup, or username/logout */}
           {loggedInUser ? (
             <>
               <span>{loggedInUser.firstName}</span>

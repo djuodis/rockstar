@@ -1,4 +1,3 @@
-// App.jsx
 import './scss/style.scss';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,7 +12,6 @@ import MainPage from './components/MainPage/MainPage';
 import { Link } from 'react-router-dom';
 import logoImage from '../public/assets/logo.png';
 
-// New component for displaying MainPage content
 const Home = () => (
   <>
 <div className="home">
@@ -35,9 +33,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Default route for the root path */}
         <Route path="/" element={<Home />} />
-        {/* Add routes for other pages */}
         <Route path="/mainpage" element={<MainPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login/>} />

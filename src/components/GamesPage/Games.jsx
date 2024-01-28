@@ -8,7 +8,7 @@ const Games = () => {
   const { id } = useParams();
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sortOrder, setSortOrder] = useState("newest");
+  const [sortOrder, setSortOrder] = useState("default");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,12 +19,14 @@ const Games = () => {
         let sortedGames = data.slice();
 
         if (!id) {
-          // Sort only when viewing all games
           sortedGames = sortedGames.sort((a, b) => {
-            const dateA = new Date(a.released);
-            const dateB = new Date(b.released);
-
-            return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
+            if (sortOrder === "newest") {
+              return new Date(b.released) - new Date(a.released);
+            } else if (sortOrder === "oldest") {
+              return new Date(a.released) - new Date(b.released);
+            } else {
+              return parseInt(a.id) - parseInt(b.id);
+            }
           });
         }
 
@@ -48,8 +50,9 @@ const Games = () => {
       <Nav />
       <div>
         <label>
-          Sort by Release Date:
+          Sort by:
           <select value={sortOrder} onChange={(e) => handleSortChange(e.target.value)}>
+            <option value="default">Default</option>
             <option value="newest">Newest to Oldest</option>
             <option value="oldest">Oldest to Newest</option>
           </select>
@@ -61,7 +64,7 @@ const Games = () => {
         ) : (
           games.map((game) => (
             <Link key={game.id} to={`/game/${game.id}`}>
-                <img className="card-img" src={game.image} alt={game.title} />
+              <img className="card-img" src={game.image} alt={game.title} />
             </Link>
           ))
         )}

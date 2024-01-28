@@ -1,4 +1,3 @@
-// Login.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -37,7 +36,6 @@ const Login = () => {
         setLoggedInUser(user);
         console.log(`Logged in as ${user.firstName}`);
         navigate(location.state?.from ? location.state.from : '/');
-        // Remove window.close() to prevent tab closure
       } else {
         setIncorrectPassword(true);
       }
