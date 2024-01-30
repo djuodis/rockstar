@@ -13,6 +13,7 @@ const SignUp = ({ setLoggedInUser }) => {
 
   const [usernameExists, setUsernameExists] = useState(false);
   const [emailExists, setEmailExists] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleInputChange = async (e) => {
     const { name, value } = e.target;
@@ -22,53 +23,53 @@ const SignUp = ({ setLoggedInUser }) => {
     });
 
     try {
-      const checkResponse = await fetch('http://localhost:4000/users/check', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: name === 'firstName' ? value : formData.firstName,
-          email: name === 'email' ? value : formData.email,
-        }),
-      });
+      const existingUsers = await fetch('http://localhost:4000/users', {
+        method: 'GET',
+      }).then((response) => response.json());
 
-      if (checkResponse.ok) {
-        const checkData = await checkResponse.json();
-
-        if (name === 'firstName') {
-          setUsernameExists(checkData.exists);
-        } else if (name === 'email') {
-          setEmailExists(checkData.exists);
-        }
+      // Check if the username or email already exists in the existingUsers array
+      if (existingUsers.some(user => user.firstName === value)) {
+        setUsernameExists(true);
       } else {
-        console.error('Error checking username or email existence:', checkResponse.statusText);
+        setUsernameExists(false);
+      }
+
+      if (existingUsers.some(user => user.email === value)) {
+        setEmailExists(true);
+      } else {
+        setEmailExists(false);
       }
     } catch (error) {
-      console.error('Error:', error.message);
+      // Handle error if needed
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (usernameExists || emailExists) {
       alert('Username or Email is already in use');
       return;
     }
-
+  
     try {
       const existingUsers = await fetch('http://localhost:4000/users', {
         method: 'GET',
       }).then((response) => response.json());
-
+  
+      // Check if the username or email already exists in the existingUsers array
+      if (existingUsers.some(user => user.firstName === formData.firstName || user.email === formData.email)) {
+        alert('Username or Email is already in use');
+        return;
+      }
+  
       const newUserId = existingUsers.length + 1;
-
+  
       const formDataWithId = {
         ...formData,
         id: newUserId.toString(),
       };
-
+  
       const response = await fetch('http://localhost:4000/users', {
         method: 'POST',
         headers: {
@@ -76,61 +77,65 @@ const SignUp = ({ setLoggedInUser }) => {
         },
         body: JSON.stringify(formDataWithId),
       });
-
+  
       if (response.ok) {
         console.log('Signup successful!');
-        setLoggedInUser(formDataWithId);
-        navigate('/login');
+        
+        // Redirect to the login page after successful signup
+        navigate('/login'); // You can change '/login' to the desired route
       } else {
-        console.error('Signup failed:', response.statusText);
+        console.error('Error during signup:', response.statusText);
       }
     } catch (error) {
-      console.error('Error:', error.message);
+      console.error('Error during signup:', error);
     }
   };
+  
+  
 
   return (
-    <>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          UserName:
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleInputChange}
-            required
-          />
-          {usernameExists && <span style={{ color: 'red' }}>Username already in use</span>}
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          {emailExists && <span style={{ color: 'red' }}>Email already in use</span>}
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Sign Up</button>
-      </form>
-    </>
+    <div className="signUp">
+      <div className="form">
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSubmit}>
+          <label>
+            UserName:
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              required
+            />
+            {usernameExists && <span style={{ color: 'red' }}>Username already in use</span>}
+          </label>
+          <label>
+            Email address:
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            {emailExists && <span style={{ color: 'red' }}>Email already in use</span>}
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <br />
+          <button type="submit">Sign Up</button>
+        </form>
+        {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+      </div>
+    </div>
   );
 };
 

@@ -59,7 +59,9 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Login</h2>
+      <div className="login">
+        <div className="form">
+ <h2>Login</h2>
       <form>
         <label htmlFor="username">Username:</label>
         <input
@@ -85,7 +87,11 @@ const Login = () => {
       </form>
 
       {loggedInUser && <p>Welcome, {loggedInUser.firstName}!</p>}
+        </div>
+     
     </div>
+      </div>
+    
   );
 };
 

@@ -59,14 +59,15 @@ const Games = () => {
 
   return (
     <>
+    <ScrollToTop smooth color="#6f00ff" />
+          <Nav />
       {loading ? (
         <Loading />
       ) : error ? ( // Display Error404 component if there's an error
         <Error404 />
       ) : (
         <>
-          <ScrollToTop smooth color="#6f00ff" />
-          <Nav />
+          
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}

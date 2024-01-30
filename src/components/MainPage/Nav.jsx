@@ -43,6 +43,8 @@ const Nav = () => {
       if (response.ok) {
         console.log('Logout successful');
         setLoggedInUser(null);
+        // Reload the page after successful logout
+        window.location.reload();
       } else {
         console.error('Error logging out:', response.statusText);
       }

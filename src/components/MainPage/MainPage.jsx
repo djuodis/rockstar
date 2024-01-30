@@ -23,13 +23,12 @@ const MainPage = () => {
 
   return (
     <>
-      
+       <ScrollToTop smooth color="#6f00ff" />
+      <Nav />
       {loading ? (
         <LoadingSpinner /> // Display loading spinner while data is being loaded
       ) : (
         <>
-        <ScrollToTop smooth color="#6f00ff" />
-      <Nav />
           <Headers />
           <SlideShow />
           <Rockstars />
