@@ -1,13 +1,54 @@
 // Nav.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logoImage from '../../../public/assets/logo.png';
 
 const Nav = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
 
-  const handleLogout = () => {
-    setLoggedInUser(null);
+  useEffect(() => {
+    const fetchLoggedInUser = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/loggedIn');
+        if (response.ok) {
+          const users = await response.json();
+
+          if (users.length > 0) {
+            setLoggedInUser(users[0]);
+          } else {
+            setLoggedInUser(null);
+          }
+        } else {
+          console.error('Error fetching logged-in user:', response.statusText);
+          setLoggedInUser(null);
+        }
+      } catch (error) {
+        console.error('Error fetching logged-in user:', error.message);
+        setLoggedInUser(null);
+      }
+    };
+
+    fetchLoggedInUser();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch(`http://localhost:4000/loggedIn/${loggedInUser.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        console.log('Logout successful');
+        setLoggedInUser(null);
+      } else {
+        console.error('Error logging out:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error logging out:', error.message);
+    }
   };
 
   return (
@@ -27,19 +68,21 @@ const Nav = () => {
 
           {loggedInUser ? (
             <>
-              <span>{loggedInUser.firstName}</span>
-              <button onClick={handleLogout}>Logout</button>
+              <div className="loggedInUser">
+                <span style={{ color: 'white' }}>{loggedInUser.username}</span>
+                <button onClick={handleLogout}>Logout</button>
+              </div>
             </>
           ) : (
             <>
-              <Link to="/login" target="_blank"> Login</Link>
-              <Link to="/signup" target="_blank">Sign Up</Link>
+              <Link to="/login">Login</Link>
+              <Link to="/signup">Sign Up</Link>
             </>
           )}
         </div>
       </nav>
     </>
   );
-}
+};
 
-export default Nav;
+export default Nav

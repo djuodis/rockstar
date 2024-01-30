@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Nav from "../../components/MainPage/Nav";
 import Footer from "../../components/MainPage/Footer";
 import ScrollToTop from "react-scroll-to-top";
+import Loading from "../Loading";
 
 const GamePage = () => {
   const { id } = useParams();
@@ -11,31 +12,38 @@ const GamePage = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editingReviewId, setEditingReviewId] = useState(null);
+  const [loggedInUser, setLoggedInUser] = useState(null);
 
   useEffect(() => {
     const fetchGame = async () => {
       try {
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
         const gameResponse = await fetch(`http://localhost:4000/products/${id}`);
         const gameData = await gameResponse.json();
         setGame(gameData);
-      } catch (error) {
-        console.error("Error fetching game data:", error);
-      }
 
-      try {
         const game_infoResponse = await fetch(`http://localhost:4000/game_info?productId=${id}`);
         const game_infoData = await game_infoResponse.json();
         setgame_info(game_infoData);
-      } catch (error) {
-        console.error("Error fetching game_info:", error);
-      }
 
-      try {
         const reviewsResponse = await fetch(`http://localhost:4000/reviews?productId=${id}`);
+
+        if (!reviewsResponse.ok) {
+          throw new Error("Failed to fetch reviews");
+        }
+
         const reviewsData = await reviewsResponse.json();
-        setReviews(reviewsData);
+        const reviewsArray = Array.isArray(reviewsData) ? reviewsData : [];
+        const parsedReviews = reviewsArray.map(review => ({
+          ...review,
+          id: parseInt(review.id),
+          productId: parseInt(review.productId)
+        }));
+
+        setReviews(parsedReviews);
       } catch (error) {
-        console.error("Error fetching reviews:", error);
+        console.error("Error fetching game data:", error);
       }
 
       setLoading(false);
@@ -44,45 +52,120 @@ const GamePage = () => {
     fetchGame();
   }, [id]);
 
-  const editReview = async (editedReview) => {
+  useEffect(() => {
+    const fetchLoggedInUser = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/loggedIn');
+        if (response.ok) {
+          const users = await response.json();
+
+          if (users.length > 0) {
+            setLoggedInUser(users[0]);
+          } else {
+            setLoggedInUser(null);
+          }
+        } else {
+          console.error('Error fetching logged-in user:', response.statusText);
+          setLoggedInUser(null);
+        }
+      } catch (error) {
+        console.error('Error fetching logged-in user:', error.message);
+        setLoggedInUser(null);
+      }
+    };
+
+    fetchLoggedInUser();
+  }, []);
+
+  const submitNewReview = async (newReview) => {
     try {
-      await fetch(`http://localhost:4000/reviews/${editedReview.id}`, {
-        method: 'PUT',
+      const loggedInResponse = await fetch('http://localhost:4000/loggedIn');
+      const loggedInUser = await loggedInResponse.json();
+  
+      if (!loggedInUser || !loggedInUser.userId) {
+        alert('Please Login  to post your review.');
+        return;
+      }
+  
+      newReview.userId = loggedInUser.userId;
+      newReview.username = loggedInUser.username;
+  
+      const response = await fetch('http://localhost:4000/reviews', {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(editedReview),
+        body: JSON.stringify(newReview),
+      });
+  
+      if (response.ok) {
+        const createdReview = await response.json();
+        setReviews((prevReviews) => [...prevReviews, createdReview]);
+      } else {
+        console.error('Failed to add a new review:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error adding a new review:', error.message);
+    }
+  };
+  
+
+  const startEditing = (reviewId) => {
+    const reviewToEdit = reviews.find((review) => review.id === reviewId);
+
+    if (loggedInUser && reviewToEdit && loggedInUser.userId === reviewToEdit.userId) {
+      setEditingReviewId(reviewId);
+    } else {
+      alert('You can only edit the card that you created yourself.');
+    }
+  };
+
+  const editReview = async (editedReview) => {
+    try {
+      const originalReview = reviews.find((review) => review.id === editedReview.id);
+
+      if (!originalReview) {
+        console.error("Original review not found for editing.");
+        return;
+      }
+
+      const updatedReview = {
+        ...editedReview,
+        productId: originalReview.productId,
+      };
+
+      await fetch(`http://localhost:4000/reviews/${editedReview.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedReview),
       });
 
       setReviews((prevReviews) =>
         prevReviews.map((review) =>
-          review.id === editedReview.id ? { ...review, ...editedReview } : review
+          review.id === editedReview.id ? updatedReview : review
         )
       );
 
-      // Exit editing mode after a successful edit
       setEditingReviewId(null);
     } catch (error) {
-      console.error('Error editing review:', error);
+      console.error("Error editing review:", error);
     }
   };
 
   const deleteReview = async (reviewId) => {
     try {
-      // Delete review from API
       await fetch(`http://localhost:4000/reviews/${reviewId}`, {
-        method: 'DELETE',
+        method: "DELETE",
       });
 
-      // Update state to remove the deleted review
-      setReviews((prevReviews) => prevReviews.filter((review) => review.id !== reviewId));
+      setReviews((prevReviews) =>
+        prevReviews.filter((review) => review.id !== reviewId)
+      );
     } catch (error) {
-      console.error('Error deleting review:', error);
+      console.error("Error deleting review:", error);
     }
-  };
-
-  const startEditing = (reviewId) => {
-    setEditingReviewId(reviewId);
   };
 
   const cancelEditing = () => {
@@ -95,7 +178,7 @@ const GamePage = () => {
       <Nav />
 
       {loading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : (
         <>
           {game_info.map((review, index) => (
@@ -119,13 +202,34 @@ const GamePage = () => {
                   <img src={review.gameImage4} />
                 </div>
 
+                <div className="addReview">
+                  <h1>Add Review</h1>
+
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      const newReview = {
+                        title: e.target.title.value,
+                        userComment: e.target.userComment.value,
+                        productId: id,
+                      };
+                      submitNewReview(newReview);
+                    }}
+                  >
+                    <label>Title:</label>
+                    <input type="text" name="title" />
+                    <label>Comment:</label>
+                    <textarea name="userComment" />
+                    <button type="submit">Submit Review</button>
+                  </form>
+                </div>
+
                 <div className="reviews">
                   <h1>Reviews</h1>
                   <div className="cards">
                     {reviews.map((review) => (
                       <div className="card" key={review.id}>
                         {editingReviewId === review.id ? (
-                          // Edit form for the selected review
                           <form
                             onSubmit={(e) => {
                               e.preventDefault();
@@ -133,38 +237,55 @@ const GamePage = () => {
                                 id: review.id,
                                 title: e.target.title.value,
                                 username: e.target.username.value,
-                                rating: e.target.rating.value,
                                 userComment: e.target.userComment.value,
                               };
                               editReview(editedReview);
                             }}
                           >
                             <label>Title:</label>
-                            <input type="text" name="title" defaultValue={review.title} />
+                            <input
+                              type="text"
+                              name="title"
+                              defaultValue={review.title}
+                            />
                             <label>Username:</label>
-                            <input type="text" name="username" defaultValue={review.username} />
-                            <label>Rating:</label>
-                            <input type="number" name="rating" defaultValue={review.rating} />
+                            <input
+                              type="text"
+                              name="username"
+                              defaultValue={review.username}
+                            />
                             <label>Comment:</label>
-                            <textarea name="userComment" defaultValue={review.userComment} />
+                            <textarea
+                              name="userComment"
+                              defaultValue={review.userComment}
+                            />
                             <button type="submit">Save Changes</button>
                             <button type="button" onClick={cancelEditing}>
                               Cancel
                             </button>
                           </form>
                         ) : (
-                          // Display existing review content with "Edit" and "Delete" buttons
                           <>
                             <h2>{review.title}</h2>
-                            <p>{review.username}</p>
+                            <p>{loggedInUser && loggedInUser.userId === review.userId ? 'You' : review.username}</p>
                             <p>{review.rating}</p>
                             <p>{review.userComment}</p>
-                            <button type="button" onClick={() => startEditing(review.id)}>
-                              Edit
-                            </button>
-                            <button type="button" onClick={() => deleteReview(review.id)}>
-                              Delete
-                            </button>
+                            {loggedInUser && loggedInUser.userId === review.userId && (
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={() => startEditing(review.id)}
+                                >
+                                  Edit
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => deleteReview(review.id)}
+                                >
+                                  Delete
+                                </button>
+                              </>
+                            )}
                           </>
                         )}
                       </div>

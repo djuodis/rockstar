@@ -1,7 +1,8 @@
+// SignUp.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SignUp = () => {
+const SignUp = ({ setLoggedInUser }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -57,29 +58,28 @@ const SignUp = () => {
     }
 
     try {
-      const existingUser = await fetch('http://localhost:4000/users', {
+      const existingUsers = await fetch('http://localhost:4000/users', {
         method: 'GET',
       }).then((response) => response.json());
 
-      if (
-        existingUser.some(
-          (user) => user.firstName === formData.firstName || user.email === formData.email
-        )
-      ) {
-        alert('Username or Email is already in use');
-        return;
-      }
+      const newUserId = existingUsers.length + 1;
+
+      const formDataWithId = {
+        ...formData,
+        id: newUserId.toString(),
+      };
 
       const response = await fetch('http://localhost:4000/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataWithId),
       });
 
       if (response.ok) {
         console.log('Signup successful!');
+        setLoggedInUser(formDataWithId);
         navigate('/login');
       } else {
         console.error('Signup failed:', response.statusText);

@@ -33,10 +33,10 @@ body {
   height: 100vh;
   background-position: center;
   background-size: cover;
-
   display: flex;
   flex-direction: column;
   gap: 200px;
+  
   img {
     margin-top: 15px;
     margin-left: 30px;
@@ -69,7 +69,9 @@ body {
   }
 }
 
-//prideti burgeri
+
+
+
 nav {
   background: #ffab00;
   margin: auto;
@@ -84,6 +86,14 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    .logedUser {
+      margin-left: 10px;
+      display: flex;
+
+      button {
+      }
+    }
 
     a {
     font-family: pricedown;
@@ -285,6 +295,8 @@ footer {
     }
     .locations {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
 
       h1 {
@@ -479,10 +491,23 @@ footer {
   }
 }
 
+.sort {
+  margin-left: 15px;
+  margin-top: 15px;
+  select {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+
+    option {
+      background: #ffab00;
+    }
+  }
+}
+
 .pics {
   margin: auto;
-  gap: 10px;
-  margin-top: 50px;
+  gap: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -490,10 +515,10 @@ footer {
   a {
     margin: 20px 0;
     max-width: 400px;
-    transition: 0.6s;
+    transition: 0.8s;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 
@@ -506,37 +531,129 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 95%;
+  margin: auto;
+
+  .addReview {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+
+    textarea {
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    input {
+      padding: 15px 5px;
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      text-align: start;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      }
+
+      button {
+        border-radius: 8px;
+        padding: 5px 10px;
+        background: #ffab00;
+        transition: 0.3s;
+
+        &:hover {
+          border: 1px solid grey;
+          color: white;
+          background: black;
+        }
+      }
+
+    }
 
   .reviews {
     width: 90%;
-    margin-top: 80px;
+      margin-top: 80px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
     h1 {
-
       font-size: 70px;
     }
      
     .cards {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       gap: 50px;
       justify-content: center;
+      flex-wrap: wrap;
     }
+    
     .card {
-      width: 30%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 29%;
+      min-height: 300px; 
       padding: 15px;
       border: 1px solid grey;
       border-radius: 8px;
 
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-      h2, p {
+        input {
+          padding: 5px 10px;
+          border-radius: 8px;
+        }
+        textarea {
+          padding: 5px 10px;
+          border-radius: 8px;
+        }
+      }
+    
+      button {
+        width: 50%;
+        padding: 5px 10px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        background: #ffab00;
+        transition: 0.3s;
+    
+        &:hover {
+          border: 1px solid grey;
+          color: white;
+          background: black;
+        }
+      }
+    
+      h2,
+      p {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         margin-bottom: 10px;
       }
     }
+
+    @media (max-width: 768px) {
+
+      .game-top {
+      }
+
+      .card {
+        width: 80%;
+      }
+    }
+    
 
   }
 
@@ -593,10 +710,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 80px;
+
+    h1 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
 
     td {
       text-align: center;
@@ -617,11 +739,29 @@ footer {
       padding: 15px;
     }
   }
-  .rating {
-    height: 100px;
-  }
+  
 }
 
 label {
   color: wheat;
 }
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    h1 {
+      font-size: 80px;
+    }
+
+    p {
+      font-size: 32px;
+    }
+
+  img {
+    margin-top: 20px;
+    width: 500px;
+  }
+}
+

@@ -1,15 +1,14 @@
 // Login.jsx
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [enteredUsername, setEnteredUsername] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState('');
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [users, setUsers] = useState([]);
   const [incorrectPassword, setIncorrectPassword] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -29,14 +28,27 @@ const Login = () => {
     fetchUsers();
   }, []);
 
-  const handleLogin = () => {
-    const user = users.find((user) => user.firstName === username);
+  const handleLogin = async () => {
+    const user = users.find((user) => user.firstName === enteredUsername);
 
     if (user) {
-      if (user.password === password) {
+      if (user.password === enteredPassword) {
         setLoggedInUser(user);
         console.log(`Logged in as ${user.firstName}`);
-        navigate(location.state?.from ? location.state.from : '/');
+
+        try {
+          await fetch('http://localhost:4000/loggedIn', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userId: user.id, username: enteredUsername, password: enteredPassword }),
+          });
+        } catch (error) {
+          console.error('Error sending login information to API:', error.message);
+        }
+
+        navigate('/mainpage');
       } else {
         setIncorrectPassword(true);
       }
@@ -53,16 +65,16 @@ const Login = () => {
         <input
           type="text"
           id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={enteredUsername}
+          onChange={(e) => setEnteredUsername(e.target.value)}
         />
 
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={enteredPassword}
+          onChange={(e) => setEnteredPassword(e.target.value)}
         />
 
         <button type="button" onClick={handleLogin}>
