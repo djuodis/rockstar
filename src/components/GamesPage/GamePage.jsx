@@ -138,8 +138,7 @@ const GamePage = () => {
       console.error("Error adding a new review:", error.message);
     }
   };
-  
-  
+
 
   const startEditing = (reviewId) => {
     if (!loggedInUser) {
@@ -156,8 +155,6 @@ const GamePage = () => {
     }
   };
   
-  
-
   const editReview = async (editedReview) => {
     try {
       const originalReview = reviews.find(
@@ -195,13 +192,6 @@ const GamePage = () => {
       console.error("Error editing review:", error);
     }
   };
-  
-
-
-
-
-
-
 
   const deleteReview = async (reviewId) => {
     try {

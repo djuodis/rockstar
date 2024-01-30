@@ -63,7 +63,7 @@ const Games = () => {
           <Nav />
       {loading ? (
         <Loading />
-      ) : error ? ( // Display Error404 component if there's an error
+      ) : error ? ( 
         <Error404 />
       ) : (
         <>

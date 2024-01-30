@@ -36,7 +36,7 @@ const About = () => {
           <ScrollToTop smooth color="#6f00ff" />
           <Nav />
           <div className="header">
-            <h1>GREAT IDEAS CAM COME </h1>
+            <h1>GREAT IDEAS CAN COME </h1>
             <h1>FROM ANYONE AND </h1>
             <h1>THEY DO.</h1>
           </div>
@@ -117,10 +117,10 @@ const About = () => {
                 />
 
                 <div className="middleText">
-                  <h3>
+                  <h4>
                     In 2006, as part of testing its new RAGE engine ahead of GTA IV
                     and RDR.
-                  </h3>
+                  </h4>
                 </div>
               </div>
               <div className="bottom">

@@ -12,11 +12,10 @@
   h1,
   h2,
   h3,
-  h4,
   h5,
   h6 {
     color: #ffab00;
-    font-family: pricedown ;
+    font-family: pricedown;
     font-size: 50px;
   }
 
@@ -36,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 200px;
-  
+
   img {
     margin-top: 15px;
     margin-left: 30px;
@@ -68,9 +67,6 @@ body {
     }
   }
 }
-
-
-
 
 nav {
   background: #ffab00;
@@ -108,9 +104,9 @@ nav {
     }
 
     a {
-    font-family: pricedown;
-    color: black;
-    font-size: 18px;
+      font-family: pricedown;
+      color: black;
+      font-size: 18px;
       text-decoration: none;
       margin-left: 20px;
       cursor: pointer;
@@ -129,17 +125,17 @@ nav {
 }
 
 header {
-  width: 95%;
+  width: 80%;
+  text-align: center;
   margin: auto;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
 
-  
   h1 {
     font-size: pricedown;
-    font-size: 80px;
+    font-size: 60px;
     color: #ffab00;
   }
 }
@@ -153,18 +149,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 
 .rg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 100px;
   .name {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 30px;
     h2 {
       font-size: pricedown;
@@ -179,14 +175,108 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+
     h4 {
-      font-size: pricedown;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 40px;
       color: white;
     }
     .parahraph1,
     .parahraph2 {
-      width: 450px;
+      width: 30%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .parahraph3,
+    .parahraph4 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 150px;
+
+      .gta_online {
+        width: 80%;
+        height: 50%;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+
+        img {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          width: 90%;
+        }
+        p {
+          width: 90%;
+        }
+
+        button {
+          background: #ffab00;
+          margin-top: 30px;
+          padding: 5px;
+          height: 110px;
+          border-radius: 50%;
+          width: 110px;
+          rotate: 340deg;
+          border: none;
+          transition: 0.3s;
+
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+          &:hover {
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+
+    .all_games {
+      padding: 20px 30px;
+      border-radius: 8px;
+      background: black;
+      border: 1px solid #ffab00;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.08);
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rg {
+    .parahraps {
+      width: 100%;
+      .parahraph1,
+      .parahraph2,
+      .parahraph3,
+      .parahraph4 {
+        width: 100%;
+
+        .card {
+          width: 90%;
+        }
+      }
     }
   }
 }
@@ -263,9 +353,8 @@ footer {
       flex-direction: column;
       align-items: center;
 
-      
       h2 {
-      font-size: pricedown;
+        font-size: pricedown;
         color: #ffab00;
         font-size: 50px;
       }
@@ -273,8 +362,6 @@ footer {
         margin: 30px 0;
         color: lightgrey;
       }
-
-      
 
       a {
         border: 1px solid #ffab00;
@@ -312,7 +399,7 @@ footer {
       gap: 20px;
 
       h1 {
-      font-size: pricedown;
+        font-size: pricedown;
         border-bottom: 1px solid lightgray;
         padding: 0px 15px;
         border-radius: 8px;
@@ -336,6 +423,31 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  footer {
+    .gameLauncher {
+      margin-bottom: 30px;
+      .btmPic {
+        width: 80%;
+      }
+    }
+
+    .bottom {
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    .gameLauncher {
+      .btmPic {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .header {
   width: 82%;
   margin: 30px 0px;
@@ -354,7 +466,7 @@ footer {
   justify-content: center;
   margin-top: 30px;
   iframe {
-    width: 1000px;
+    width: 90%;
     height: 500px;
   }
 }
@@ -377,27 +489,26 @@ footer {
       margin-top: 20px;
       text-align: center;
       img {
-        width: 800px;
+        width: 90%;
       }
     }
     .info {
       font-size: 30px;
       width: 35%;
-      margin-top: 280px;
-      margin-left: -100px;
     }
   }
   .games {
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     .gta5 {
-      width: 350px;
+      width: 100%;
       margin-right: 20px;
     }
     h4 {
-    font-size: pricedown;
+      font-size: pricedown;
 
       font-size: 20px;
     }
@@ -406,11 +517,10 @@ footer {
       width: 30%;
     }
   }
-
   .start {
     width: 90%;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 100px;
 
     h2 {
       text-align: end;
@@ -426,25 +536,28 @@ footer {
     .top {
       margin-top: 80px;
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       gap: 50px;
       justify-content: center;
-      height: 550px;
+
+      img {
+        width: 30%;
+      }
       .topText {
         width: 50%;
         display: flex;
         flex-direction: column;
 
         h3 {
-    font-size: pricedown;
-
+          font-family: Roboto Mono;
           font-size: 32px;
           color: white;
           margin-bottom: 20px;
         }
 
         h4 {
-    font-size: pricedown;
-
+          font-family: Roboto Mono;
           color: grey;
           font-size: 18px;
           margin-top: 20px;
@@ -455,48 +568,169 @@ footer {
     .middle {
       flex-direction: row-reverse;
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       gap: 50px;
       justify-content: center;
-      height: 550px;
 
       .middleText {
         align-items: center;
         width: 30%;
         margin-top: 150px;
-        h3 {
-    font-size: pricedown;
-
-          font-size: 32px;
-          color: white;
+        h4 {
+          font-size: Roboto Mono;
+          color: grey;
+          font-size: 24px;
         }
       }
       img {
-        margin-top: -80px;
+        width: 40%;
       }
     }
 
     .bottom {
-      flex-direction: row;
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       gap: 50px;
       justify-content: center;
-      height: 550px;
 
       img {
-        margin-top: -80px;
-        margin-right: 200px;
+        width: 40%;
       }
 
       .bottomText {
         align-items: center;
-        margin-top: 150px;
         width: 30%;
-        h4 {
-    font-size: pricedown;
+        margin-top: 150px;
 
-          margin-left: -185px;
+        h4 {
+          font-size: Roboto Mono;
           color: grey;
-          font-size: 16px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 95%;
+
+    h1 {
+      width: 30%;
+    }
+  }
+
+  .about {
+    .team {
+      .info {
+        margin-left: 0;
+        text-align: center;
+        width: 70%;
+        margin-top: 10px;
+      }
+    }
+
+    .games {
+      display: flex;
+      flex-direction: column-reverse;
+
+      p {
+        width: 90%;
+      }
+
+      img {
+        width: 50%;
+      }
+
+      .a {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+
+        img {
+          width: 50%;
+        }
+
+        h4 {
+          font-size: 34px;
+          margin: 15px 0;
+        }
+      }
+    }
+
+    .start {
+      width: 100%;
+
+      .top {
+        margin-bottom: 40px;
+        img {
+          width: 50%;
+        }
+        .topText {
+          width: 90%;
+        }
+      }
+
+      .middle {
+        img {
+          width: 50%;
+        }
+        .middleText {
+          margin: 10px;
+          width: 80%;
+        }
+      }
+
+      .bottom {
+        margin-top: 50px;
+        display: flex;
+        margin-bottom: 100px;
+
+        .bottomText {
+          margin: 10px;
+          width: 80%;
+          margin-bottom: 10px;
+        }
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .about {
+    .start {
+      .top {
+        img {
+          width: 100%;
+        }
+      }
+      .middle {
+        img {
+          width: 100%;
+        }
+      }
+      .bottom {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .games {
+      img {
+        width: 100%;
+      }
+      .a {
+        img {
+          width: 100%;
         }
       }
     }
@@ -547,6 +781,11 @@ footer {
   width: 95%;
   margin: auto;
 
+  .logo {
+    margin: 50px 0;
+    width: 70%;
+  }
+
   .addReview {
     display: flex;
     align-items: center;
@@ -573,26 +812,25 @@ footer {
       width: 100%;
       display: flex;
       flex-direction: column;
-      }
-
-      button {
-        border-radius: 8px;
-        padding: 5px 10px;
-        background: #ffab00;
-        transition: 0.3s;
-
-        &:hover {
-          border: 1px solid grey;
-          color: white;
-          background: black;
-        }
-      }
-
     }
+
+    button {
+      border-radius: 8px;
+      padding: 5px 10px;
+      background: #ffab00;
+      transition: 0.3s;
+
+      &:hover {
+        border: 1px solid grey;
+        color: white;
+        background: black;
+      }
+    }
+  }
 
   .reviews {
     width: 90%;
-      margin-top: 80px;
+    margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -600,21 +838,21 @@ footer {
     h1 {
       font-size: 70px;
     }
-     
+
     .cards {
       display: flex;
       gap: 50px;
       justify-content: center;
       flex-wrap: wrap;
     }
-    
+
     .card {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       gap: 20px;
       width: 29%;
-      min-height: 300px; 
+      min-height: 300px;
       padding: 15px;
       border: 1px solid grey;
       border-radius: 8px;
@@ -633,7 +871,7 @@ footer {
           border-radius: 8px;
         }
       }
-    
+
       button {
         width: 50%;
         padding: 5px 10px;
@@ -642,23 +880,22 @@ footer {
         outline: none;
         background: #ffab00;
         transition: 0.3s;
-    
+
         &:hover {
           border: 1px solid grey;
           color: white;
           background: black;
         }
       }
-    
+
       h2,
       p {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         margin-bottom: 10px;
       }
     }
 
     @media (max-width: 768px) {
-
       .game-top {
       }
 
@@ -666,13 +903,6 @@ footer {
         width: 80%;
       }
     }
-    
-
-  }
-
-  .logo {
-    margin: 50px 0;
-    width: 70%;
   }
 
   .game-top {
@@ -752,7 +982,22 @@ footer {
       padding: 15px;
     }
   }
-  
+}
+
+@media (max-width: 768px) {
+  .game-info {
+    .addReview {
+      text-align: center;
+    }
+    .logo {
+      width: 90%;
+    }
+    .game-top {
+      .game-details {
+        width: 95%;
+      }
+    }
+  }
 }
 
 label {
@@ -764,20 +1009,19 @@ label {
   flex-direction: column;
   align-items: center;
 
-    h1 {
-      font-size: 80px;
-    }
+  h1 {
+    font-size: 80px;
+  }
 
-    p {
-      font-size: 32px;
-    }
+  p {
+    font-size: 32px;
+  }
 
   img {
     margin-top: 20px;
     width: 500px;
   }
 }
-
 
 .login {
   background: url(https://images8.alphacoders.com/573/573739.jpg);
@@ -788,20 +1032,19 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-.form{ 
-  background: transparent;
-  backdrop-filter: blur(10px);
-  border: 1px solid grey;
-  border-radius: 8px;
-  width: 20%;
-  padding: 15px;
+  .form {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid grey;
+    border-radius: 8px;
+    width: 20%;
+    padding: 15px;
 
-  h2 {
-    text-align: center;
+    h2 {
+      text-align: center;
+    }
   }
-}
   form {
-
     width: 100%;
     margin-top: 20px;
     display: flex;
@@ -825,7 +1068,7 @@ label {
       &:hover {
         background: #ffab00;
       }
-      }
+    }
     input {
       width: 100%;
       margin-bottom: 10px;
@@ -836,7 +1079,7 @@ label {
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .login {
     .form {
       width: 30%;
@@ -850,8 +1093,7 @@ label {
   }
 }
 
-@media(max-width: 768px) {
-
+@media (max-width: 768px) {
   .login {
     .form {
       width: 50%;
@@ -865,12 +1107,11 @@ label {
   }
 }
 
-@media(max-width: 426px) {
+@media (max-width: 426px) {
   .login {
     .form {
       width: 80%;
     }
-    
   }
 }
 
@@ -884,14 +1125,14 @@ label {
   align-items: center;
   justify-content: center;
 
-  .form{ 
+  .form {
     background: transparent;
     backdrop-filter: blur(10px);
     border: 1px solid grey;
     border-radius: 8px;
     width: 20%;
     padding: 15px;
-  
+
     h1 {
       text-align: center;
     }
@@ -908,7 +1149,6 @@ label {
       text-align: center;
       width: 80%;
       margin-bottom: 20px;
-      
     }
     button {
       margin-top: 10px;
@@ -923,7 +1163,7 @@ label {
       &:hover {
         background: #ffab00;
       }
-      }
+    }
     input {
       width: 100%;
       margin-bottom: 10px;
@@ -934,7 +1174,7 @@ label {
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .signUp {
     .form {
       width: 30%;
@@ -948,8 +1188,7 @@ label {
   }
 }
 
-@media(max-width: 768px) {
-
+@media (max-width: 768px) {
   .signUp {
     .form {
       width: 50%;
@@ -963,11 +1202,10 @@ label {
   }
 }
 
-@media(max-width: 426px) {
+@media (max-width: 426px) {
   .signUp {
     .form {
       width: 80%;
     }
-    
   }
 }

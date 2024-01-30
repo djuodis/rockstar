@@ -1,6 +1,8 @@
 // Login.jsx
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Loading from '../Loading';
+import { motion } from 'framer-motion';
 
 const Login = () => {
   const [enteredUsername, setEnteredUsername] = useState('');
@@ -8,11 +10,16 @@ const Login = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [users, setUsers] = useState([]);
   const [incorrectPassword, setIncorrectPassword] = useState(false);
+  const [loading, setLoading] = useState(true); // Loading state
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
+        // Simulate a loading delay of 2000 milliseconds (2 seconds)
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
         const response = await fetch('http://localhost:4000/users');
         if (response.ok) {
           const userData = await response.json();
@@ -20,8 +27,10 @@ const Login = () => {
         } else {
           console.error('Error fetching users:', response.statusText);
         }
+        setLoading(false); // Set loading to false when data is fetched
       } catch (error) {
         console.error('Error:', error.message);
+        setLoading(false); // Set loading to false in case of an error
       }
     };
 
@@ -29,6 +38,8 @@ const Login = () => {
   }, []);
 
   const handleLogin = async () => {
+    setLoading(true); // Set loading to true when login is in progress
+
     const user = users.find((user) => user.firstName === enteredUsername);
 
     if (user) {
@@ -48,50 +59,61 @@ const Login = () => {
           console.error('Error sending login information to API:', error.message);
         }
 
-        navigate('/mainpage');
+        // Redirect the user to the previous location or '/mainpage' if there's no previous location
+        const { from } = location.state || { from: { pathname: '/mainpage' } };
+        navigate(from);
       } else {
         setIncorrectPassword(true);
       }
     } else {
       setIncorrectPassword(true);
     }
+
+    setLoading(false); // Set loading to false after login attempt
   };
 
   return (
     <div>
-      <div className="login">
-        <div className="form">
- <h2>Login</h2>
-      <form>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          value={enteredUsername}
-          onChange={(e) => setEnteredUsername(e.target.value)}
-        />
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="login">
+          <motion.div
+            className="form"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2>Login</h2>
+            <form>
+              <label htmlFor="username">Username:</label>
+              <input
+                type="text"
+                id="username"
+                value={enteredUsername}
+                onChange={(e) => setEnteredUsername(e.target.value)}
+              />
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={enteredPassword}
-          onChange={(e) => setEnteredPassword(e.target.value)}
-        />
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                value={enteredPassword}
+                onChange={(e) => setEnteredPassword(e.target.value)}
+              />
 
-        <button type="button" onClick={handleLogin}>
-          Login
-        </button>
+              <button type="button" onClick={handleLogin}>
+                Login
+              </button>
 
-        {incorrectPassword && <p style={{ color: 'red' }}>Incorrect username or password</p>}
-      </form>
+              {incorrectPassword && <p style={{ color: 'red' }}>Incorrect username or password</p>}
+            </form>
 
-      {loggedInUser && <p>Welcome, {loggedInUser.firstName}!</p>}
+            {loggedInUser && <p>Welcome, {loggedInUser.firstName}!</p>}
+          </motion.div>
         </div>
-     
+      )}
     </div>
-      </div>
-    
   );
 };
 
