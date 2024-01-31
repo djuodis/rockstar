@@ -4,6 +4,7 @@ import Nav from "../../components/MainPage/Nav";
 import Footer from "../../components/MainPage/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import Loading from "../Loading/Loading";
+import Error404 from "../ErrorPage/Error404";  
 import '../../scss/GamePage.scss'
 
 const GamePage = () => {
@@ -16,6 +17,7 @@ const GamePage = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [userLoading, setUserLoading] = useState(true);
   const [loggedInUserInfo, setLoggedInUserInfo] = useState(null);
+  const [error, setError] = useState(null); // New state for tracking errors
 
   useEffect(() => {
     const fetchGame = async () => {
@@ -53,6 +55,7 @@ const GamePage = () => {
         setReviews(parsedReviews);
       } catch (error) {
         console.error("Error fetching game data:", error);
+        setError(error);
       }
 
       setLoading(false);
@@ -226,7 +229,9 @@ const GamePage = () => {
       <ScrollToTop smooth color="#6f00ff" />
       <Nav />
 
-      {loading ? (
+      {error ? (
+        <Error404 />
+      ) : loading ? (
         <Loading />
       ) : (
         <>
@@ -234,6 +239,7 @@ const GamePage = () => {
             <div key={index}>
               <div className="game-info">
                 <img className="logo" src={review.logo} />
+
                 <div className="game-top">
                   <img src={review.image} />
                   <div className="game-details">
@@ -244,6 +250,7 @@ const GamePage = () => {
                 </div>
 
                 <h2 className="screens">Screens</h2>
+
                 <div className="game-images">
                   <img src={review.gameImage1} />
                   <img src={review.gameImage2} />
@@ -280,7 +287,9 @@ const GamePage = () => {
                 </div>
 
                 <div className="reviews">
+
                   <h1>Reviews</h1>
+                  
                   <div className="cards">
                     {reviews.map((review) => (
                       <div className="card" key={review.id}>
