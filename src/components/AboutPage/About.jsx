@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import Nav from "../../components/MainPage/Nav";
 import Footer from "../../components/MainPage/Footer";
 import ScrollToTop from "react-scroll-to-top";
-import Loading from "../Loading"; 
+import Loading from "../Loading/Loading"; 
+import '../../scss/About.scss'
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -11,12 +12,8 @@ const About = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a loading delay of 2000 milliseconds (2 seconds)
         await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // Fetch any additional data or perform async operations here
-
-        // Set loading to false once data is fetched
+    
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -25,8 +22,7 @@ const About = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures the effect runs only once on mount
-
+  }, []); 
   return (
     <>
       {loading ? (

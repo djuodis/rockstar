@@ -3,21 +3,21 @@ import { Link, useParams } from "react-router-dom";
 import Nav from "../../components/MainPage/Nav";
 import Footer from "../../components/MainPage/Footer";
 import ScrollToTop from "react-scroll-to-top";
-import Loading from "../Loading"; 
+import Loading from "../Loading/Loading"; 
 import { motion } from "framer-motion";
-import { Error404 } from "./Error404"; // Import Error404 component
+import { Error404 } from "../ErrorPage/Error404";
+import '../../scss/Games.scss'
 
 const Games = () => {
   const { id } = useParams();
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sortOrder, setSortOrder] = useState("default");
-  const [error, setError] = useState(null); // New state for error
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a loading delay of 2000 milliseconds (2 seconds)
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         const response = await fetch("http://localhost:4000/products");
@@ -45,7 +45,7 @@ const Games = () => {
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError(error); // Set the error state
+        setError(error);
         setLoading(false);
       }
     };

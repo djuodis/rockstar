@@ -1,0 +1,200 @@
+header {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  
+    h1 {
+      font-size: pricedown;
+      font-size: 60px;
+      color: #ffab00;
+    }
+  }
+
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .name {
+      margin-top: 80px;
+      margin-bottom: 30px;
+      h2 {
+        font-size: pricedown;
+        color: #ffab00;
+        font-size: 50px;
+      }
+    }
+    .parahraps {
+      color: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+  
+      h4 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        color: white;
+      }
+      .parahraph1,
+      .parahraph2 {
+        width: 30%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+  
+      .parahraph3,
+      .parahraph4 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 150px;
+  
+        .gta_online {
+          width: 80%;
+          height: 50%;
+        }
+  
+        .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 30%;
+  
+          img {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 90%;
+          }
+          p {
+            width: 90%;
+          }
+  
+          button {
+            background: #ffab00;
+            margin-top: 30px;
+            padding: 5px;
+            height: 110px;
+            border-radius: 50%;
+            width: 110px;
+            rotate: 340deg;
+            border: none;
+            transition: 0.3s;
+  
+            cursor: pointer;
+  
+            a {
+              text-decoration: none;
+              color: white;
+            }
+  
+            &:hover {
+              transform: scale(1.08);
+            }
+          }
+        }
+      }
+  
+      .all_games {
+        padding: 20px 30px;
+        border-radius: 8px;
+        background: black;
+        border: 1px solid #ffab00;
+        transition: 0.3s;
+        cursor: pointer;
+  
+        &:hover {
+          transform: scale(1.08);
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    .name {
+      margin-bottom: 20px;
+      h2 {
+        font-size: pricedown;
+        color: #ffab00;
+        font-size: 50px;
+      }
+    }
+  
+    .questions {
+      .answer {
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+  
+        &.show {
+          display: block;
+          max-height: 500px;
+        }
+      }
+      h4 {
+        font-size: pricedown;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      p {
+        margin-bottom: 10px;
+        color: lightgray;
+      }
+  
+      .q1,
+      .q2,
+      .q3,
+      .q4,
+      .q5,
+      .q6 {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .rg {
+      .parahraps {
+        width: 100%;
+        .parahraph1,
+        .parahraph2,
+        .parahraph3,
+        .parahraph4 {
+          width: 100%;
+  
+          .card {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }

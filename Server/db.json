@@ -1,0 +1,661 @@
+{
+  "game_info": [
+    {
+      "id": "1",
+      "title": "Grand Theft Auto 5",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/732efc56393d89076732e76b0a2b55b2.svg",
+      "platforms": "Playstation 3, Xbox 360 PlayStation 4,Xbox One, Windows, PlayStation 5, Xbox Series X/S ",
+      "price": 39,
+      "description1": "When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.",
+      "description2": "Current players can transfer both GTAV Story Mode progress and GTA Online characters and progression to PlayStation 5 and Xbox Series X|S with a one-time migration.",
+      "productId": 1,
+      "image": "https://m.media-amazon.com/images/M/MV5BYjEzMTM4ZmQtZTEzYS00ZGVmLTkwM2EtNWNmMDI4OWQ0MjBmXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://cdn.mos.cms.futurecdn.net/0ec31f35c38c3cfc172afe615dcef6f4.jpg",
+      "gameImage2": "https://www.playstationlifestyle.net/wp-content/uploads/sites/9/2012/12/DogrideGTA.jpg",
+      "gameImage3": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/grand-theft-auto-5/f/f3/3-27screen9.jpg",
+      "gameImage4": "https://editors.dexerto.com/wp-content/uploads/2022/03/09/GTA-5-next-gen-preload.jpg",
+      "developer": "Rockstar Games, Rockstar North ",
+      "platform": "PS 4 PS 5 PlayStation 3 Xbox One Xbox 360 Xbox Series X/S PC",
+      "released": "September 17, 2013."
+    },
+    {
+      "id": "2",
+      "title": "Grand Theft Auto Online",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/9d2753ceddb2213d956d51d369985513.svg",
+      "platforms": "Playstation 3, Xbox 360 PlayStation 4,Xbox One, Windows, PlayStation 5, Xbox Series X/S ",
+      "price": "GTA Online is included free with all copies of GTA 5",
+      "description1": "Experience GTA Online, a dynamic and ever-evolving online universe for up to 30 players, including all existing gameplay upgrades and content released since launch ready to enjoy solo or with friends.",
+      "description2": "Career Progress is a new feature in-game that displays your progression as you rise through the criminal ranks and establish your empire.",
+      "productId": 2,
+      "image": "https://m.media-amazon.com/images/M/MV5BN2I3NjZmN2YtNGQ0Yi00ZWUwLThlMGQtOWI4YmMxMTA1YTQyXkEyXkFqcGdeQXVyMTU0NTQxNTM4._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://i.redd.it/i-recreated-several-of-the-loading-screens-in-game-outfit-v0-4c0ptxvvkob81.jpg?width=2880&format=pjpg&auto=webp&s=b9a34e1a335e5b287eea981c0b9751de94b2a19f",
+      "gameImage2": "https://preview.redd.it/ive-always-wondered-about-this-loading-screen-who-are-these-v0-pjli159jtxg91.jpg?auto=webp&s=6ab6c15f4e63ef2816beda5c8a27e90216dc55c0",
+      "gameImage3": "https://preview.redd.it/which-online-loading-screen-is-your-favorite-v0-j6qx97g8wucb1.png?width=1280&format=png&auto=webp&s=d5c157c0e8171bc7a838fdba47f9212dd5b96072",
+      "gameImage4": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2020/07/gta-online-load-times-trick.jpg",
+      "developer": "Rockstar North, Rockstar Games  ",
+      "platform": "PS 5 PS 4 PlayStation 3 Xbox One Xbox 360 Xbox Series X/S PC",
+      "released": "September 17, 2013."
+    },
+    {
+      "id": "3",
+      "title": "Grand Theft Auto IV",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/01dcdecd53de88ec599ab76ce2863fcd.svg",
+      "platforms": "PlayStation 3, Xbox 360, Windows ",
+      "price": 20,
+      "description1": "What does the American Dream mean today? For Niko Bellic, fresh off the boat from Europe, it is the hope he can escape his past. For his cousin, Roman, it is the vision that together they can find fortune in Liberty City, gateway to the land of opportunity.",
+      "description2": "As they slip into debt and are dragged into a criminal underworld by a series of shysters, thieves, and sociopaths, they discover that the reality is very different from the dream in a city that worships money and status, and is heaven for those who have them and a living nightmare for those who don't.",
+      "productId": 3,
+      "image": "https://m.media-amazon.com/images/M/MV5BYThjZGVhMzktZjRlNS00NTcwLTk4ZjktMWUzMmU3MTM4YThmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/25-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/25-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/25-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/25-4.jpg",
+      "developer": "Rockstar North, Rockstar Toronto",
+      "platform": "Xbox One PC PS3 Xbox 360",
+      "released": "April 29, 2008"
+    },
+    {
+      "id": "4",
+      "title": "Red Dead Redemption 2",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/5e3cf24e53a1fb96410ddbe7d17ca96f.svg",
+      "platforms": "Playstation 3, Xbox 360 PlayStation 4,Xbox One, Windows, PlayStation 5, Xbox Series X/S ",
+      "price": 60,
+      "description1": "America, 1899. The end of the Wild West era has begun. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.",
+      "productId": 4,
+      "image": "https://m.media-amazon.com/images/M/MV5BMjMyZDY5NTctMzQ0Ny00ZTU0LWE1ZDYtNDYzMjAxYjA1ZGYxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/dddba1283626a4a2b4b72caab74b7b52.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/dd49acbd09bf9cca44465e287e7d28a9.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/0acf4d3df4ee50566b62cf775f24db5c.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/377f48b68a7264f2960cfc3ca7119991.jpg",
+      "developer": "Rockstar Games",
+      "platform": "PS 4 Xbox One Google Stadia PC",
+      "released": "October 18, 2018"
+    },
+    {
+      "id": "5",
+      "title": "Red Dead Redemption Online",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/1b2f9181adacf5b0713a311fb0065164.svg",
+      "platforms": "Playstation 3, Xbox 360 PlayStation 4,Xbox One, Windows, PlayStation 5, Xbox Series X/S ",
+      "price": "Red Dead Redemption Online is included free with all copies of Red Dead Redemption 2",
+      "description1": "Forge your own path as you battle lawmen, outlaw gangs and ferocious wild animals to build a life on the American frontier. Build a camp, ride solo or form a posse and explore everything from the snowy mountains in the North to the swamps of the South, from remote outposts to busy farms and bustling towns. Chase down bounties, hunt, fish and trade, search for exotic treasures, run your own underground Moonshine distillery, or become a Naturalist to learn the secrets of the animal kingdom and much more in a world of astounding depth and detail.",
+      "description2": "Join millions of fellow players in the American West, and experience a world now packed with years’ worth of new features, gameplay and additional enhancements.",
+      "productId": 5,
+      "image": "https://m.media-amazon.com/images/M/MV5BMmQ2YWQzN2ItZDU5OC00YjYwLThiYzEtMjNhNWY3MmI1YTEyXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/d3039044282c51ebc568595fad852d49.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/e090d89fbb4b6bdf62d5ab4dca458ba1.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/c5268c444f18e64f089e89e56130166a.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/5b1cf8cb3d86cf75af4adee975bcffb0.jpg",
+      "developer": "Rockstar Games",
+      "platform": "PS 4 Xbox One PC Google Stadia ",
+      "released": "October 18, 2018"
+    },
+    {
+      "id": "6",
+      "title": "Red Dead Redemption",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/afce1282be848202a965031813991b09.svg",
+      "platforms": "Playstation 3, Xbox 360 PlayStation 4, Nintendo Switch",
+      "price": 40,
+      "description1": "When federal agents threaten his family, former outlaw John Marston is forced to hunt down the gang of criminals he once called friends.",
+      "description2": "Step into the events immediately following the 2018 blockbuster, Red Dead Redemption 2, in the critically acclaimed tale of Marston’s journey to bury his blood-stained past, one man at a time.",
+      "productId": 6,
+      "image": "https://m.media-amazon.com/images/M/MV5BODQ1YzU4MmMtYmE0YS00NTRjLWE4YWMtZWNiNzM4M2ZkMzcxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/reddeadredemption/3e043fcced1e13fbdfb106c1d3ada71707e7414c.jpg?im=Resize=1440",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/reddeadredemption/02bf81f04ee1408763c138c46f9506601997a51e.jpg?im=Resize=1440",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/reddeadredemption/28f4970113ee79cc0230f0e61f5b5bd0062f6296.jpg?im=Resize=1440",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/reddeadredemption/1fbf28ded4aa0638eb80e81ec9e0fc4c39a6a447.jpg?im=Resize=1440",
+      "developer": "Rockstar Games",
+      "platform": "PS 4 Nintendo Switch PS 3 Xbox 360 ",
+      "released": "August 18, 2010"
+    },
+    {
+      "id": "7",
+      "title": "Bully Scholarship Edition",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/b2e6fe18e15f1109b7d442881fccb9a6.svg",
+      "platforms": "Playstation 2, Xbox 360, Windows, Wii, Android, iOS ",
+      "price": 15,
+      "description1": "The Rockstar tradition of groundbreaking, original gameplay and humorous tongue-in-cheek storytelling invades an entirely new setting: the schoolyard. As a mischievous schoolboy, you'll stand up to bullies, get picked on by teachers, play pranks, win or lose the girl, and ultimately learn to navigate the obstacles of the worst school around, Bullworth Academy — a corrupt and crumbling prep school with an uptight facade.",
+      "description2": "The story follows Jimmy Hopkins, a teenager who's been expelled from every school he's ever attended. Left to fend for himself after his mother abandons him at Bullworth to go on her fifth honeymoon, Jimmy has a whole year of school ahead of him; working his way up the social ladder of this demented institution of supposed learning, standing up for what he thinks is right, and taking on the liars, cheats, and snobs who are the most popular members of the student body and faculty. If Jimmy can survive the school year and outsmart his rivals, he could rule the school.",
+      "productId": 7,
+      "image": "https://m.media-amazon.com/images/M/MV5BYTQ5NWM4ZDgtZTFhZS00YzQwLWI5OWMtZjVlYTdhZGM4ZGNiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/19-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/19-4.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/19-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/19-5.jpg",
+      "developer": "Rockstar Vancouver",
+      "platform": "PS4 PC PS3 Xbox 360 Wii iOS PS2 Android",
+      "released": "October 17, 2006"
+    },
+    {
+      "id": "8",
+      "title": "L.A. Noire",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/63c149607e42c3f7a8988ef21d53ec97.svg",
+      "platforms": "Playstation 3, Xbox 360, PlayStation 4,Xbox One, Windows, PlayStation 4 ",
+      "price": 20,
+      "description1": "Amid the post-war boom of Hollywood's Golden Age, Cole Phelps — an LAPD detective — is thrown headfirst into a city drowning in its own success. Corruption is rampant, the drug trade is exploding, and murder rates are at an all-time high. In his fight to climb the ranks and do what's right, Phelps must unravel the truth behind a string of arson attacks, racketeering conspiracies, and brutal murders, battling the L.A. underworld and even members of his own department to uncover a secret that could shake the city to its rotten core.",
+      "description2": "Utilizing revolutionary facial animation technology that captures every nuance of an actor's facial performance in astonishing detail, L.A. Noire blends the breathtaking action with true detective work for an unprecedented interactive experience. Solve brutal crimes, plots, and conspiracies inspired by real crimes from 1947 Los Angeles, one of the most corrupt and violent times in L.A. history. Search for clues, chase down suspects, and interrogate witnesses as you struggle to find the truth in a city where everyone has something to hide.",
+      "productId": 8,
+      "image": "https://m.media-amazon.com/images/M/MV5BNWVkOGQ4NzMtY2Q2OS00OTcwLTlmMGEtMmE2MDc0NDEyY2RjXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/35-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/35-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/35-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/35-4.jpg",
+      "developer": "Rockstar Leeds, Team Bondi",
+      "platform": " PS VR Oculus Rift HTC Vive Nintendo Switch PS4 Xbox One PC Valve Index PS3 Xbox 360",
+      "released": "May 17, 2011"
+    },
+    {
+      "id": "9",
+      "title": "Max Payne 3",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/ba94346e4b206acc56976b59974bffbe.png",
+      "platforms": "Playstation 3, Xbox 360 PlayStation 4,Xbox One, Windows, PlayStation 5, Xbox Series X/S ",
+      "price": 39,
+      "description1": "For Max, the tragedies that took his loved ones years ago are wounds that refuse to heal. No longer a cop, close to washed up, and addicted to pain killers, he takes a job in São Paulo, Brazil, protecting the family of wealthy real estate mogul Rodrigo Branco in an effort to finally escape his troubled past. But as events spiral out of his control, Max Payne finds himself alone on the streets of an unfamiliar city, desperately searching for the truth and fighting for a way out.",
+      "description2": "Featuring cutting edge shooting mechanics for precision gunplay, advanced new Bullet Time® and Shootdodge™ effects, full integration of Natural Motion’s Euphoria Character Behavior system for lifelike movement, and a dark and twisted story, Max Payne 3 is a seamless, highly detailed, cinematic experience.",
+      "productId": 9,
+      "image": "https://m.media-amazon.com/images/M/MV5BNzQyNTM0YTctZjZhYi00MDg5LWE0ZWMtODcyMmJiNzY3NGZhXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/40-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/40-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/40-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/40-4.jpg",
+      "developer": "Rockstar Studios",
+      "platform": " PC PS3 Xbox 360 Mac",
+      "released": "May 15, 2012"
+    },
+    {
+      "id": "10",
+      "title": "Grand Theft Auto Vice City",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/a73128cb6201d9d830f2ac4802ad6c2f.svg",
+      "platforms": "Playstation 3, Xbox 360, Windows, OS X ",
+      "price": 20,
+      "description1": "Welcome to the 1980s. From the decade of big hair, excess, and pastel suits comes a story of one man's rise to the top of the criminal pile as Grand Theft Auto returns.",
+      "description2": "Vice City is a huge urban sprawl ranging from the beach to the swamps and the glitz to the ghetto, and is the most varied, complete, and alive digital city ever created. Combining non-linear gameplay with a character-driven narrative, you arrive in a town brimming with delights and degradation and are given the opportunity to take it over as you choose.",
+      "productId": 10,
+      "image": "https://m.media-amazon.com/images/M/MV5BMzdkMTM3ODEtZjFkNi00NzFiLTgxMTEtZWZlMDJmMzkyODNiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/34-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/34-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/34-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/34-4.jpg",
+      "developer": "Rockstar Leeds, Rockstar North",
+      "platform": " PS3 PS2 PSP",
+      "released": "October 27, 2002"
+    },
+    {
+      "id": "11",
+      "title": "Grand Theft Auto III",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/70d4774a8eb28cbdc69793504746f961.svg",
+      "platforms": "PlayStation 2, Windows, Xbox, Mac OS X, Android, iOS,Fire OS",
+      "price": 12,
+      "description1": "Welcome to Liberty City. Where it all began. The critically acclaimed blockbuster Grand Theft Auto III brings to life the dark and seedy underworld of Liberty City. With a massive and diverse open world, a wild cast of characters from every walk of life, and the freedom to explore at will, Grand Theft Auto III puts the dark, intriguing, and ruthless world of crime at your fingertips.",
+      "description2": "With stellar voice acting, a darkly comic storyline, a stunning soundtrack, and revolutionary open-world gameplay, Grand Theft Auto III is the game that defined the open-world genre for a generation.",
+      "productId": 11,
+      "image": "https://m.media-amazon.com/images/M/MV5BNjhlMmM5YmYtMWFkNS00MzJkLWI0MTAtODU1OWY2YTI4MTA1XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/24-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/24-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/24-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/24-4.jpg",
+      "developer": "Rockstar North",
+      "platform": " PS4 PC Mac iOS Android PS2 Xbox Kindle",
+      "released": "October 22, 2001"
+    },
+    {
+      "id": "12",
+      "title": "Grand Theft Auto San Andreas",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/854bac2f4c6c23fb7ca33f9407ac3c0d.svg",
+      "platforms": "PlayStation 2, Windows, Xbox, Mac OS X, iOS, Android,Windows Phone, Fire OS, Xbox 360, PlayStation 3 ",
+      "price": 15,
+      "description1": "Five years ago Carl Johnson escaped from the pressures of life in Los Santos, San Andreas — a city tearing itself apart with gang trouble, drugs, and corruption. Where film stars and millionaires do their best to avoid the dealers and gangbangers.",
+      "description2": "Now, it's the early '90s. Carl's got to go home. His mother has been murdered, his family has fallen apart and his childhood friends are all heading toward disaster. On his return to the neighborhood, a couple of corrupt cops frame him for homicide. CJ is forced on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets",
+      "productId": 12,
+      "image": "https://m.media-amazon.com/images/M/MV5BN2NmOWZmM2EtZGI1Yi00ZDYxLTkxODEtOTMwNmQ0M2IxOWZiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/31-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/31-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/31-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/31-4.jpg",
+      "developer": "Rockstar Studios",
+      "platform": " PC PS3 Xbox 360 Mac",
+      "released": "October 26, 2004"
+    },
+    {
+      "id": "13",
+      "title": "Max Payne 2: The Fall of Max Payne",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/c3f251fe931f3533cb980bbc23e599b8.svg",
+      "platforms": "Windows, Xbox, PlayStation 2",
+      "price": 10,
+      "description1": "For Max, the tragedies that took his loved ones years ago are wounds that refuse to heal. No longer a cop, close to washed up, and addicted to pain killers, he takes a job in São Paulo, Brazil, protecting the family of wealthy real estate mogul Rodrigo Branco in an effort to finally escape his troubled past. But as events spiral out of his control, Max Payne finds himself alone on the streets of an unfamiliar city, desperately searching for the truth and fighting for a way out.",
+      "description2": "Featuring cutting edge shooting mechanics for precision gunplay, advanced new Bullet Time® and Shootdodge™ effects, full integration of Natural Motion’s Euphoria Character Behavior system for lifelike movement, and a dark and twisted story, Max Payne 3 is a seamless, highly detailed, cinematic experience.",
+      "productId": 13,
+      "image": "https://m.media-amazon.com/images/M/MV5BMmMyYWU4ZTEtY2ViOC00YTQ4LWJmOGQtMTMxYWM2OTViY2JmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/39-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/39-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/39-4.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/39-5.jpg",
+      "developer": "Rockstar North",
+      "platform": " PS4 Xbox One PC PS3 Xbox 360 Mac iOS PS2 Android Xbox Kindle Windows Phone",
+      "released": "October 26, 2004"
+    },
+    {
+      "id": "14",
+      "title": "Grand Theft Auto Episodes From Liberty City",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/6a7dfd2058127cb6f5adca6c9b1d91cc.png",
+      "platforms": "Playstation 3, Xbox 360, Windows ",
+      "price": 11,
+      "description1": "Liberty City worships money and status — it's heaven for those who have them, and a living nightmare for those who don’t. Johnny, a veteran member of The Lost biker gang, is caught in the middle of a vicious turf war with rival gangs for control of the city. Luis, part-time hoodlum and full-time assistant to legendary nightclub impresario Tony Prince (a.k.a. “Gay Tony”), is struggling with the competing loyalties of family and friends in a world in which everyone has a price. Their lives cross paths with devastating consequences as they fight to survive in a city torn apart by violence and corruption.",
+      "description2": "Grand Theft Auto: Episodes from Liberty City includes both The Lost and Damned and The Ballad of Gay Tony.",
+      "productId": 14,
+      "image": "https://m.media-amazon.com/images/M/MV5BZDQ3OGY2MjItMDlmYi00YWM2LWE2YWYtMDgyZTg5YjZhODljXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/28-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/28-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/28-5.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/28-6.jpg",
+      "developer": "Rockstar North",
+      "platform": " Xbox One, PC, PS3, Xbox 360",
+      "released": "October 9, 2009"
+    },
+    {
+      "id": "15",
+      "title": "Grand Theft Auto Chinatown Wars",
+      "logo": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/02cb5f725e6afe939eba7948707242f5.svg",
+      "platforms": "Nintendo DS, PlayStation Portable, iOS, Android, Fire OS ",
+      "price": 20,
+      "description1": "Following his father's murder, Huang Lee has a simple mission: deliver an ancient sword to his Uncle Kenny to ensure his family retains control of the Triad gangs of Liberty City. Huang is a spoiled rich kid who expects everything to run smoothly, but his trip does not go exactly as planned. After being robbed and left to die, he will search for honor, riches, and revenge in the most dangerous and morally bankrupt city in the world.",
+      "productId": 15,
+      "image": "https://m.media-amazon.com/images/M/MV5BNTEyYmIzYmYtYzk4Mi00OTVhLTg2NDItMjljMDdhMzFmZDg4XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "gameImage1": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/27-1.jpg",
+      "gameImage2": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/27-2.jpg",
+      "gameImage3": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/27-3.jpg",
+      "gameImage4": "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/screens/27-4.jpg",
+      "developer": "Rockstar Leeds, Rockstar North",
+      "platform": " iOS, Android, Kindle, PSP, Nintendo DS",
+      "released": "March 17, 2009"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BYjEzMTM4ZmQtZTEzYS00ZGVmLTkwM2EtNWNmMDI4OWQ0MjBmXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "September 17, 2013."
+    },
+    {
+      "id": "2",
+      "image": "https://m.media-amazon.com/images/M/MV5BN2I3NjZmN2YtNGQ0Yi00ZWUwLThlMGQtOWI4YmMxMTA1YTQyXkEyXkFqcGdeQXVyMTU0NTQxNTM4._V1_FMjpg_UX1000_.jpg",
+      "released": "September 17, 2013."
+    },
+    {
+      "id": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BYThjZGVhMzktZjRlNS00NTcwLTk4ZjktMWUzMmU3MTM4YThmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg",
+      "released": "April 29, 2008"
+    },
+    {
+      "id": "4",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjMyZDY5NTctMzQ0Ny00ZTU0LWE1ZDYtNDYzMjAxYjA1ZGYxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "released": "October 18, 2018"
+    },
+    {
+      "id": "5",
+      "image": "https://m.media-amazon.com/images/M/MV5BMmQ2YWQzN2ItZDU5OC00YjYwLThiYzEtMjNhNWY3MmI1YTEyXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_FMjpg_UX1000_.jpg",
+      "released": "October 18, 2018"
+    },
+    {
+      "id": "6",
+      "image": "https://m.media-amazon.com/images/M/MV5BODQ1YzU4MmMtYmE0YS00NTRjLWE4YWMtZWNiNzM4M2ZkMzcxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "released": "August 18, 2010"
+    },
+    {
+      "id": "7",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTQ5NWM4ZDgtZTFhZS00YzQwLWI5OWMtZjVlYTdhZGM4ZGNiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "October 17, 2006"
+    },
+    {
+      "id": "8",
+      "image": "https://m.media-amazon.com/images/M/MV5BNWVkOGQ4NzMtY2Q2OS00OTcwLTlmMGEtMmE2MDc0NDEyY2RjXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "May 17, 2011"
+    },
+    {
+      "id": "9",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzQyNTM0YTctZjZhYi00MDg5LWE0ZWMtODcyMmJiNzY3NGZhXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "May 15, 2012"
+    },
+    {
+      "id": "10",
+      "image": "https://m.media-amazon.com/images/M/MV5BMzdkMTM3ODEtZjFkNi00NzFiLTgxMTEtZWZlMDJmMzkyODNiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "October 27, 2002"
+    },
+    {
+      "id": "11",
+      "image": "https://m.media-amazon.com/images/M/MV5BNjhlMmM5YmYtMWFkNS00MzJkLWI0MTAtODU1OWY2YTI4MTA1XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "released": "October 22, 2001"
+    },
+    {
+      "id": "12",
+      "image": "https://m.media-amazon.com/images/M/MV5BN2NmOWZmM2EtZGI1Yi00ZDYxLTkxODEtOTMwNmQ0M2IxOWZiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "October 26, 2004"
+    },
+    {
+      "id": "13",
+      "image": "https://m.media-amazon.com/images/M/MV5BMmMyYWU4ZTEtY2ViOC00YTQ4LWJmOGQtMTMxYWM2OTViY2JmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "released": "October 14, 2003"
+    },
+    {
+      "id": "14",
+      "image": "https://m.media-amazon.com/images/M/MV5BZDQ3OGY2MjItMDlmYi00YWM2LWE2YWYtMDgyZTg5YjZhODljXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+      "released": "October 9, 2009"
+    },
+    {
+      "id": "15",
+      "image": "https://m.media-amazon.com/images/M/MV5BNTEyYmIzYmYtYzk4Mi00OTVhLTg2NDItMjljMDdhMzFmZDg4XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
+      "released": "October 25, 2005"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Deividas",
+      "email": "deividas73245@gmail.com",
+      "password": "asd"
+    }
+  ],
+  "loggedIn": [],
+  "reviews": [
+    {
+      "id": "1",
+      "title": "Amazing game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 1",
+      "productId": 1
+    },
+    {
+      "id": "2",
+      "title": "It's okey",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 1",
+      "productId": 1
+    },
+    {
+      "id": "3",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 1",
+      "productId": 1
+    },
+    {
+      "id": "4",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 2",
+      "productId": 2
+    },
+    {
+      "id": "5",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 2",
+      "productId": 2
+    },
+    {
+      "id": "6",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 2",
+      "productId": 2
+    },
+    {
+      "id": "8",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 3",
+      "productId": 3
+    },
+    {
+      "id": "9",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 3",
+      "productId": 3
+    },
+    {
+      "id": "10",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 4",
+      "productId": 4
+    },
+    {
+      "id": "11",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 4",
+      "productId": 4
+    },
+    {
+      "id": "12",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 4",
+      "productId": 4
+    },
+    {
+      "id": "13",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 5",
+      "productId": 5
+    },
+    {
+      "id": "14",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 5",
+      "productId": 5
+    },
+    {
+      "id": "15",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 5",
+      "productId": 5
+    },
+    {
+      "id": "16",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 6",
+      "productId": 6
+    },
+    {
+      "id": "17",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 6",
+      "productId": 6
+    },
+    {
+      "id": "18",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 6",
+      "productId": 6
+    },
+    {
+      "id": "19",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 7",
+      "productId": 7
+    },
+    {
+      "id": "20",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 7",
+      "productId": 7
+    },
+    {
+      "id": "21",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 7",
+      "productId": 7
+    },
+    {
+      "id": "22",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 8",
+      "productId": 8
+    },
+    {
+      "id": "23",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 8",
+      "productId": 8
+    },
+    {
+      "id": "24",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 8",
+      "productId": 8
+    },
+    {
+      "id": "26",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 9",
+      "productId": 9
+    },
+    {
+      "id": "27",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 9",
+      "productId": 9
+    },
+    {
+      "id": "28",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 10",
+      "productId": 10
+    },
+    {
+      "id": "29",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 10",
+      "productId": 10
+    },
+    {
+      "id": "30",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 10",
+      "productId": 10
+    },
+    {
+      "id": "31",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 11",
+      "productId": 11
+    },
+    {
+      "id": "32",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 11",
+      "productId": 11
+    },
+    {
+      "id": "33",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 11",
+      "productId": 11
+    },
+    {
+      "id": "32",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 12",
+      "productId": 12
+    },
+    {
+      "id": "33",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 12",
+      "productId": 12
+    },
+    {
+      "id": "34",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 12",
+      "productId": 12
+    },
+    {
+      "id": "35",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 13",
+      "productId": 13
+    },
+    {
+      "id": "36",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 13",
+      "productId": 13
+    },
+    {
+      "id": "37",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 13",
+      "productId": 13
+    },
+    {
+      "id": "38",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 14",
+      "productId": 14
+    },
+    {
+      "id": "39",
+      "title": "10/10",
+      "username": "Antanas",
+      "userComment": "Product review 2 of product 14",
+      "productId": 14
+    },
+    {
+      "id": "40",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 14",
+      "productId": 14
+    },
+    {
+      "id": "41",
+      "title": "Great game",
+      "username": "Petras",
+      "userComment": "Product review 1 of product 15",
+      "productId": 15
+    },
+    {
+      "id": "42",
+      "title": "Good game",
+      "username": "Pranas",
+      "userComment": "Product review 1 of product 15",
+      "productId": 15
+    },
+    {
+      "id": "43",
+      "title": "Great work",
+      "username": "Antanas",
+      "userComment": "Product review 3 of product 15",
+      "productId": 15
+    }
+  ]
+}

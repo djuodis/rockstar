@@ -1,0 +1,225 @@
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  
+    .logo {
+      margin: 50px 0;
+      width: 70%;
+    }
+  
+    .addReview {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 80px;
+  
+      textarea {
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+  
+      input {
+        padding: 15px 5px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+      }
+  
+      h1 {
+        margin-bottom: 20px;
+        text-align: start;
+      }
+  
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+  
+      button {
+        border-radius: 8px;
+        padding: 5px 10px;
+        background: #ffab00;
+        transition: 0.3s;
+  
+        &:hover {
+          border: 1px solid grey;
+          color: white;
+          background: black;
+        }
+      }
+    }
+  
+    .reviews {
+      width: 90%;
+      margin-top: 80px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font-size: 70px;
+      }
+  
+      .cards {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+  
+      .card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 29%;
+        min-height: 300px;
+        padding: 15px;
+        border: 1px solid grey;
+        border-radius: 8px;
+  
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+  
+          input {
+            padding: 5px 10px;
+            border-radius: 8px;
+          }
+          textarea {
+            padding: 5px 10px;
+            border-radius: 8px;
+          }
+        }
+  
+        button {
+          width: 50%;
+          padding: 5px 10px;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          background: #ffab00;
+          transition: 0.3s;
+  
+          &:hover {
+            border: 1px solid grey;
+            color: white;
+            background: black;
+          }
+        }
+  
+        h2,
+        p {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          margin-bottom: 10px;
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .game-top {
+        }
+  
+        .card {
+          width: 80%;
+        }
+      }
+    }
+  
+    .game-top {
+      width: 100%;
+      margin: auto;
+      margin-top: -10px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+      .game-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+      }
+      p {
+        margin: 10px;
+        font-size: 15px;
+      }
+    }
+    img {
+      min-width: 25%;
+      max-height: 450px;
+    }
+  
+    .screens {
+      font-size: 50px;
+      margin-top: 50px;
+    }
+    .game-images {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+      justify-content: center;
+      gap: 20px;
+  
+      img {
+        width: 450px;
+      }
+    }
+    .specs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 80px;
+  
+      h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
+  
+      td {
+        text-align: center;
+        padding: 15px;
+        height: 45px;
+        border: 1px solid grey;
+        border-collapse: collapse;
+      }
+  
+      td,
+      th {
+        color: white;
+      }
+  
+      th {
+        border: 1px solid grey;
+        border-right: none;
+        padding: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .game-info {
+      .addReview {
+        text-align: center;
+      }
+      .logo {
+        width: 90%;
+      }
+      .game-top {
+        .game-details {
+          width: 95%;
+        }
+      }
+    }
+  }

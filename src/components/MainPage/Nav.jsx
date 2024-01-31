@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logoImage from '../../../public/assets/logo.png';
+import '../../scss/Nav.scss'
 
 const Nav = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -43,7 +44,6 @@ const Nav = () => {
       if (response.ok) {
         console.log('Logout successful');
         setLoggedInUser(null);
-        // Reload the page after successful logout
         window.location.reload();
       } else {
         console.error('Error logging out:', response.statusText);

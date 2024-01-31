@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import Nav from "../../components/MainPage/Nav";
 import Footer from "../../components/MainPage/Footer";
 import ScrollToTop from "react-scroll-to-top";
-import Loading from "../Loading";
+import Loading from "../Loading/Loading";
+import '../../scss/GamePage.scss'
 
 const GamePage = () => {
   const { id } = useParams();
@@ -15,6 +16,7 @@ const GamePage = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [userLoading, setUserLoading] = useState(true);
   const [loggedInUserInfo, setLoggedInUserInfo] = useState(null);
+
   useEffect(() => {
     const fetchGame = async () => {
       try {
@@ -68,7 +70,7 @@ const GamePage = () => {
 
           if (users.length > 0) {
             setLoggedInUser(users[0]);
-            setLoggedInUserInfo(users[0]); // Store the logged-in user information
+            setLoggedInUserInfo(users[0]);
           } else {
             setLoggedInUser(null);
             setLoggedInUserInfo(null);
@@ -96,29 +98,24 @@ const GamePage = () => {
         alert("Please log in to post your review.");
         return;
       }
-  
-      // Fetch the last created review to get its ID
+
       const lastReviewResponse = await fetch("http://localhost:4000/reviews");
       if (!lastReviewResponse.ok) {
         throw new Error("Failed to fetch last review");
       }
-  
+
       const lastReviewData = await lastReviewResponse.json();
       const lastReview = lastReviewData[lastReviewData.length - 1];
-  
-      // Calculate the new ID by adding +1 to the last created ID
+
       const newId = parseInt(lastReview.id) + 1;
-  
-      // Assign the new ID to the new review
+
       newReview.id = newId.toString();
-  
-      // Assign the user's ID and username to the new review
+
       newReview.userId = loggedInUser.userId;
       newReview.username = loggedInUser.username;
-  
-      // Remove quotes around productId and convert to integer
+
       newReview.productId = parseInt(newReview.productId);
-  
+
       const response = await fetch("http://localhost:4000/reviews", {
         method: "POST",
         headers: {
@@ -126,11 +123,11 @@ const GamePage = () => {
         },
         body: JSON.stringify(newReview),
       });
-  
+
       if (response.ok) {
         const createdReview = await response.json();
         setReviews((prevReviews) => [...prevReviews, createdReview]);
-        setEditingReviewId(null); // Reset editing state
+        setEditingReviewId(null);
       } else {
         console.error("Failed to add a new review:", response.statusText);
       }
@@ -139,40 +136,39 @@ const GamePage = () => {
     }
   };
 
-
   const startEditing = (reviewId) => {
     if (!loggedInUser) {
       alert("Please log in to edit reviews.");
       return;
     }
-  
+
     const reviewToEdit = reviews.find((review) => review.id === reviewId);
-  
+
     if (reviewToEdit && loggedInUser.userId === reviewToEdit.userId) {
       setEditingReviewId(reviewId);
     } else {
       alert("You can only edit the review that you created yourself.");
     }
   };
-  
+
   const editReview = async (editedReview) => {
     try {
       const originalReview = reviews.find(
         (review) => review.id === editedReview.id
       );
-  
+
       if (!originalReview) {
         console.error("Original review not found for editing.");
         return;
       }
-  
+
       const updatedReview = {
         ...editedReview,
         productId: originalReview.productId,
-        userId: originalReview.userId, // Preserve the userId during editing
-        username: originalReview.username, // Preserve the username during editing
+        userId: originalReview.userId,
+        username: originalReview.username,
       };
-  
+
       await fetch(`http://localhost:4000/reviews/${editedReview.id}`, {
         method: "PUT",
         headers: {
@@ -180,14 +176,14 @@ const GamePage = () => {
         },
         body: JSON.stringify(updatedReview),
       });
-  
+
       setReviews((prevReviews) =>
         prevReviews.map((review) =>
           review.id === editedReview.id ? updatedReview : review
         )
       );
-  
-      setEditingReviewId(null); // Reset editing state
+
+      setEditingReviewId(null);
     } catch (error) {
       console.error("Error editing review:", error);
     }
@@ -216,7 +212,6 @@ const GamePage = () => {
       const response = await fetch("http://localhost:4000/logout");
       if (response.ok) {
         console.log("Logout successful");
-        // Refresh the page after logout
         window.location.reload();
       } else {
         console.error("Error logging out:", response.statusText);
@@ -287,9 +282,9 @@ const GamePage = () => {
                 <div className="reviews">
                   <h1>Reviews</h1>
                   <div className="cards">
-                  {reviews.map((review) => (
-  <div className="card" key={review.id}>
-    {editingReviewId === review.id ? (
+                    {reviews.map((review) => (
+                      <div className="card" key={review.id}>
+                        {editingReviewId === review.id ? (
                           <form
                             onSubmit={(e) => {
                               e.preventDefault();
@@ -299,7 +294,7 @@ const GamePage = () => {
                                 userComment: e.target.userComment.value,
                               };
                               editReview(editedReview);
-                              setEditingReviewId(null); // Reset editing state after submitting changes
+                              setEditingReviewId(null);
                             }}
                           >
                             <label>Title:</label>
@@ -325,29 +320,29 @@ const GamePage = () => {
                         ) : (
                           <>
                             <h2>{review.title}</h2>
-        <p>
-          {loggedInUser &&
-          loggedInUser.userId === review.userId
-            ? loggedInUserInfo.username
-            : review.username}
-        </p>
-        <p>{review.rating}</p>
-        <p>{review.userComment}</p>
-        {loggedInUser &&
-          loggedInUser.userId === review.userId && (
-            <>
-              <button
-                type="button"
-                onClick={() => startEditing(review.id)}
-              >
-                Edit
-              </button>
-              <button
-                type="button"
-                onClick={() => deleteReview(review.id)}
-              >
-                Delete
-              </button>
+                            <p>
+                              {loggedInUser &&
+                              loggedInUser.userId === review.userId
+                                ? loggedInUserInfo.username
+                                : review.username}
+                            </p>
+                            <p>{review.rating}</p>
+                            <p>{review.userComment}</p>
+                            {loggedInUser &&
+                              loggedInUser.userId === review.userId && (
+                                <>
+                                  <button
+                                    type="button"
+                                    onClick={() => startEditing(review.id)}
+                                  >
+                                    Edit
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => deleteReview(review.id)}
+                                  >
+                                    Delete
+                                  </button>
                                 </>
                               )}
                           </>

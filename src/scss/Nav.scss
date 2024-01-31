@@ -1,0 +1,55 @@
+nav {
+    background: #ffab00;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50%;
+    justify-content: center;
+  
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      .loggedInUser {
+        margin-left: 10px;
+        display: flex;
+        font-size: 18px;
+  
+        button {
+          padding: 3px 6px;
+          border-radius: 8px;
+          outline: none;
+          margin-left: 3px;
+          transition: 0.3s;
+          cursor: pointer;
+          border: 1px solid black;
+          &:hover {
+            transform: scale(1.03);
+            background: lightgrey;
+          }
+        }
+      }
+  
+      a {
+        font-family: pricedown;
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+  
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .logo {
+      img {
+        width: 40px;
+      }
+    }
+  }

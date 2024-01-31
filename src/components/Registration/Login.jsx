@@ -1,8 +1,10 @@
 // Login.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Loading from '../Loading';
+import Loading from '../Loading/Loading';
 import { motion } from 'framer-motion';
+
+import '../../scss/Login.scss'
 
 const Login = () => {
   const [enteredUsername, setEnteredUsername] = useState('');
@@ -17,7 +19,6 @@ const Login = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        // Simulate a loading delay of 2000 milliseconds (2 seconds)
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         const response = await fetch('http://localhost:4000/users');
@@ -27,10 +28,10 @@ const Login = () => {
         } else {
           console.error('Error fetching users:', response.statusText);
         }
-        setLoading(false); // Set loading to false when data is fetched
+        setLoading(false); 
       } catch (error) {
         console.error('Error:', error.message);
-        setLoading(false); // Set loading to false in case of an error
+        setLoading(false);
       }
     };
 
@@ -38,7 +39,7 @@ const Login = () => {
   }, []);
 
   const handleLogin = async () => {
-    setLoading(true); // Set loading to true when login is in progress
+    setLoading(true);
 
     const user = users.find((user) => user.firstName === enteredUsername);
 
@@ -59,7 +60,7 @@ const Login = () => {
           console.error('Error sending login information to API:', error.message);
         }
 
-        // Redirect the user to the previous location or '/mainpage' if there's no previous location
+       
         const { from } = location.state || { from: { pathname: '/mainpage' } };
         navigate(from);
       } else {
@@ -69,7 +70,7 @@ const Login = () => {
       setIncorrectPassword(true);
     }
 
-    setLoading(false); // Set loading to false after login attempt
+    setLoading(false);
   };
 
   return (

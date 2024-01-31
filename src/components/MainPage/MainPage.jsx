@@ -6,27 +6,27 @@ import FAQ from './FAQ';
 import Rockstars from './Rockstars';
 import Footer from './Footer';
 import ScrollToTop from 'react-scroll-to-top';
-import LoadingSpinner from '../Loading'; // Import your loading spinner component
+import LoadingSpinner from '../Loading/Loading';
+import '../../scss/MainPage.scss'
+
 
 const MainPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading delay (you can replace this with actual data fetching logic)
     const loadingTimeout = setTimeout(() => {
       setLoading(false);
     }, 2000);
 
-    // Cleanup timeout to prevent memory leaks
     return () => clearTimeout(loadingTimeout);
-  }, []); // Empty dependency array to run the effect only once
+  }, []); 
 
   return (
     <>
        <ScrollToTop smooth color="#6f00ff" />
       <Nav />
       {loading ? (
-        <LoadingSpinner /> // Display loading spinner while data is being loaded
+        <LoadingSpinner />
       ) : (
         <>
           <Headers />

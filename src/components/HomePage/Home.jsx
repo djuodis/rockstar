@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logoImage from '../../../public/assets/logo.png';
-import Loading from '../Loading';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import Loading from '../Loading/Loading';
+import { motion } from 'framer-motion';
+ import '../../scss/Home.scss';
+
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -10,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a loading delay of 2000 milliseconds (2 seconds)
         await new Promise(resolve => setTimeout(resolve, 2000));
         setLoading(false);
       } catch (error) {

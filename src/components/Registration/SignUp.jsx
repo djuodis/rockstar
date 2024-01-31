@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Loading from '../Loading';
+import Loading from '../Loading/Loading';
+import '../../scss/SignUp.scss'
 
 const SignUp = ({ setLoggedInUser }) => {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ const SignUp = ({ setLoggedInUser }) => {
   const [usernameExists, setUsernameExists] = useState(false);
   const [emailExists, setEmailExists] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-  const [loading, setLoading] = useState(true); // Initialize loading as true
-  const [loadingSignUp, setLoadingSignUp] = useState(true); // Initialize loadingSignUp as true
+  const [loading, setLoading] = useState(true); 
+  const [loadingSignUp, setLoadingSignUp] = useState(true);
 
   const handleInputChange = async (e) => {
     const { name, value } = e.target;
@@ -106,10 +107,9 @@ const SignUp = ({ setLoggedInUser }) => {
   useEffect(() => {
     const delay = setTimeout(() => {
       setLoadingSignUp(false);
-      setLoading(false); // Set loading to false after the delay
+      setLoading(false);
     }, 2000);
 
-    // Cleanup the timeout to avoid memory leaks
     return () => clearTimeout(delay);
   }, []);
 

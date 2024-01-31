@@ -12,8 +12,8 @@ const App = () => {
   return (
     <div className='images'>
       <SimpleImageSlider
-        width="85vw"  // 80% of viewport width
-        height="75vh" // 60% of viewport height
+        width="85vw" 
+        height="75vh" 
         images={images}
         autoPlay={true}
       />

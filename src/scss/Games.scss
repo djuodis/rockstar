@@ -1,0 +1,36 @@
+.sort {
+    margin-left: 15px;
+    margin-top: 15px;
+    select {
+      margin-top: 5px;
+      padding: 5px 10px;
+      border-radius: 8px;
+  
+      option {
+        background: #ffab00;
+      }
+    }
+  }
+  
+  .pics {
+    margin: auto;
+    margin-top: 15px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    a {
+      margin: 20px 0;
+      max-width: 400px;
+      transition: 0.8s;
+  
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  
+    .card-img {
+      width: 100%;
+    }
+  }
